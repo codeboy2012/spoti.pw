@@ -1,0 +1,26 @@
+{
+   "extracted_with" : "Evevee Spotify/component/extract-components.pl",
+   "file_count" : 3,
+   "files" : [
+      {
+         "path" : "dylibs/spotifyglass.dylib",
+         "sha256" : "512b729db93e8ac3287735c75700975128fb6a5efc5659a72b52949e7f7bb587",
+         "size" : 1747536
+      },
+      {
+         "path" : "package/control",
+         "sha256" : "e8eda5a3b1cc12b856a38e3b8b6f48cc49a49e88841ab52de341819cf52b5ea1",
+         "size" : 204
+      },
+      {
+         "path" : "package/dynamic-libraries/spotifyglass.plist",
+         "sha256" : "2cbc4d64026d206e3f72dca69ed6dc985c9342f278dd97e5e873d0b8f45062d0",
+         "size" : 90
+      }
+   ],
+   "name" : "spotipw",
+   "origin" : "Evevee Spotify/source-artifacts/com.spotipw_0.22.0_iphoneos-arm.deb",
+   "origin_sha256" : "b45c34760aa082d504b8706a5a766613ed837b5ecdb00329ac6efce910403547",
+   "package" : "com.spotipw",
+   "version" : "0.22.0"
+}

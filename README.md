@@ -1,124 +1,175 @@
-<p align="center">
-  <img src="docs/icon.png" width="96" alt="">
-</p>
+<h1 align="center">PwEevee</h1>
 
-<h1 align="center">spoti.pw</h1>
-
-<p align="center">Spotify, in glass.</p>
+<p align="center"><strong>An independent integration &amp; distribution project —
+one Spotify IPA carrying two great tweaks, built, tested and published by us;
+created by others.</strong></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white" alt="iOS">
-  <img src="https://img.shields.io/badge/Spotify-9.1.78-1ED760?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify 9.1.78">
-  <img src="https://img.shields.io/badge/Objective--C-3A95E3?style=for-the-badge&logo=apple&logoColor=white" alt="Objective-C">
-  <img src="https://img.shields.io/badge/GitHub_Actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/License-PolyForm_Strict_1.0.0-blue?style=for-the-badge" alt="PolyForm Strict 1.0.0">
-</p>
-
-<p align="center">
-  <a href="https://spoti.pw">spoti.pw</a> ·
+  <a href="#what-this-is">What this is</a> ·
   <a href="#build-it">Build it</a> ·
-  <a href="docs/tweaks.md">Hack on it</a> ·
-  <a href="https://ko-fi.com/darkksh">Support</a>
+  <a href="#website">Website</a> ·
+  <a href="#credits">Credits</a> ·
+  <a href="#ai-disclosure">AI disclosure</a> ·
+  <a href="#license--rights">Legal</a>
 </p>
 
-<p align="center">
-  <img src="docs/screenshots/now-playing.webp" width="16%" alt="Full screen player with lyrics">
-  <img src="docs/screenshots/album.webp" width="16%" alt="Album">
-  <img src="docs/screenshots/playlist.webp" width="16%" alt="Playlist">
-  <img src="docs/screenshots/queue.webp" width="16%" alt="Queue">
-  <img src="docs/screenshots/live-activity.webp" width="16%" alt="Live Activity on the lock screen">
-  <img src="docs/screenshots/home.webp" width="16%" alt="Home">
-</p>
+---
 
-A no-jailbreak Theos tweak that rebuilds Spotify for iOS in Liquid Glass, injected into your own
-decrypted IPA and signed with your own certificate.
+## What this is
 
-Built and tested on **Spotify 9.1.78** — use that version's IPA. The mod hooks Spotify's own classes,
-which change between releases, so another version may build and then break.
+PwEevee does **not** create the software it distributes. It is an independent
+integration/build/distribution project that:
 
-| | |
-|---|---|
-| The redesign | **iOS 26+** |
-| Legacy look | iOS 16.1+ |
-| Live Activity | iOS 17+ |
+- obtains and prepares compatible upstream components
+- integrates [spoti.pw](https://github.com/skopevoj/spoti.pw) and EeveeSpotify into one IPA
+- resolves their dependencies (duplicates fail the build)
+- injects the tweaks into your decrypted Spotify binary and installs their resources
+- validates every build (Mach-O load commands, dependency presence, filesystem
+  structure, package format)
+- packages a reproducible IPA with a full build manifest
+- hosts recent builds and archives older ones
 
-The redesign is `UIGlassEffect`, which only exists from iOS 26. Below that the Redesigned UI switch
-is greyed out and the mod runs Spotify's own screens with everything else it adds on top. Both live
-in Settings → Mod Settings.
+We do **not** claim ownership of upstream projects, authorship of upstream tweaks, or
+any affiliation with Spotify, Apple, spoti.pw or EeveeSpotify. All trademarks belong to
+their respective owners; upstream licenses remain applicable.
+
+### What's in a build
+
+| Component | Upstream | Role in the IPA |
+|---|---|---|
+| spoti.pw 0.22.0 | [skopevoj/spoti.pw](https://github.com/skopevoj/spoti.pw) (PolyForm Strict 1.0.0; ≤ 0.21.1 GPL-3.0) | `Frameworks/spotifyglass.dylib` — Liquid Glass UI, Mod Settings, Live Activity |
+| EeveeSpotify 6.6.8 | Eevee (author); the upstream self-contained deb is maintained by jaydenjcpy | `Frameworks/EeveeSpotify.dylib`, Orion + EeveeSwiftProtobuf frameworks, `EeveeSpotify.bundle`, 142 custom icons |
+| CydiaSubstrate | Saurik (as shipped in the proven spoti.pw build) | runtime framework |
+| Spotify 9.1.84 | Spotify AB | the app itself — the decrypted Spotify app is the build's input |
+
+## Repository layout
+
+```
+Spotipw/             the upstream spoti.pw project, kept intact under its own identity
+PwEvevee/            the unified integration/build system — this project's own code
+  build-system/      the ONE pipeline: unified.sh, validate, package, tests, release
+  dependencies.json  load-command + shared-dependency policy (single source of truth)
+Evevee Spotify/      EeveeSpotify payloads + the audited artifacts they came from
+  component/         extracted Eevee payload: dylib, frameworks, bundle, 142 icons
+  source-artifacts/  the upstream debs/IPAs everything was extracted from
+docs/                ARCHITECTURE · BUILD · TROUBLESHOOTING · DEVELOPMENT
+website-src/         website source: layout + page templates (the site is generated)
+website/             the generated website (static; downloads resolve to GitHub releases)
+releases/ scripts/   local release archive + 6-month retention · shared tooling · update-releases.sh
+```
 
 ## Build it
 
-No IPA is distributed. Bring a decrypted **Spotify 9.1.78** IPA; you get an unsigned
-`spoti.pw-<mod version>.ipa` to sign with SideStore, Feather or any certificate signer. Each
-[release](https://github.com/skopevoj/spoti.pw/releases) also carries the tweak's `.deb`.
+Requirements: bash, perl (core modules only), xz, unzip. No Theos, no Xcode, no macOS.
 
-### Build with GitHub Actions
+```bash
+bash PwEvevee/build-system/unified.sh <decrypted Spotify 9.1.84 .ipa> -o dist/my-build.ipa
+```
 
-Fork the repo, enable Actions, run **Build IPA from your own Spotify IPA**. It takes a direct link to
-your decrypted `.ipa` and hands the built IPA back as a workflow artifact. No Mac needed; the link is
-masked in the log and the result stays in your fork.
+That single command runs the whole pipeline — merge → resolve → inject → validate →
+package → manifest → tests — and stops with a named error if anything is wrong.
+Details, verification steps and the test suite: [docs/BUILD.md](docs/BUILD.md).
+The injected load-command contract is byte-audited against the proven reference build
+(docs/UNIFICATION-AUDIT.md).
 
-### Build on a Mac
+Output is an **unsigned** IPA; sign it with your own certificate (SideStore, Feather,
+AltStore, Sideloadly). Compatibility is verified for Spotify 9.1.84 + spoti.pw 0.22.0 +
+EeveeSpotify 6.6.8 — other Spotify versions are not tested.
 
-Theos in `~/theos` and Xcode with an iPhoneOS 26+ SDK (`xcode-select` it). An SDK in `~/theos/sdks`
-alone builds too, but without the Live Activity. Then:
+Building the upstream tweak itself from source (Theos/macOS) still works exactly as
+upstream documents it: see [docs/tweaks.md](docs/tweaks.md) and the
+[upstream repository](https://github.com/skopevoj/spoti.pw).
 
-    brew install make ldid dpkg zsign ideviceinstaller libimobiledevice
-    uv tool install "cyan @ git+https://github.com/asdfzxcvbn/pyzule-rw"
+## Website
 
-Put the decrypted `.ipa` in `ipa/`, then:
+Hosted on SkyTweak infrastructure:
 
-    make release    # out/spoti.pw-<version>.ipa, ready to sign
-    make install    # the same, signed with your certificate and pushed over USB
+- **Canonical:** `https://pweevee.skytweak.dpdns.org/`
+- Alternate path `https://skytweak.dpdns.org/pweevee` redirects to the canonical URL
 
-`make install` reads `SIGN_P12`, `SIGN_PROFILE` and `SIGN_P12_PASSWORD` from `.signing.env`; copy
-`.signing.env.example` and fill it in.
+**GitHub is the release source of truth.** The website hosts no build files of its
+own: every download it offers resolves to a published
+[GitHub release](https://github.com/codeboy2012/spoti.pw-builds/releases) asset, or to
+the download URL named by the upstream source that publishes it. Where a release has
+no downloadable asset, the page says "Download currently unavailable" and offers the
+release on GitHub instead of a broken button. The site includes full credits, an
+AI-development disclosure, maintainer status, hosting/removal policy and contact
+information.
 
-The first build spends a minute reading Spotify's flags out of your IPA. `make flags` regenerates it.
+The site is a static, dependency-free build generated from `website-src/`. Release
+information is never typed in by hand — one command refreshes it:
 
-### Signing
+```bash
+scripts/update-releases.sh
+```
 
-Sign with a bundle id matching your certificate's App ID. If it doesn't match, the app still works
-but tapping the player on the lock screen won't open it — and it tells you on first launch which id
-to use. In Feather, copy the App ID into **Identifier** and leave **PPQ protection** off; AltStore,
-SideStore and Sideloadly get this right on their own.
+That does four things:
 
-The app keeps Spotify's bundle id, so it installs over the real Spotify.
+1. queries the GitHub API for the newest published release of PwEevee, spoti.pw and
+   EeveeSpotify (repositories declared once in `website/data/projects.json`) and
+   regenerates `website/data/releases.json`
+2. reads every declared AltSource — currently the
+   [SideloadLabs source](https://github.com/SideloadLabs/SideloasLabs-AltSource), which
+   publishes the installable EeveeSpotify IPA variants — into
+   `website/data/altsource.json`
+3. re-renders every page
+4. runs the site checks
 
-## Support
-
-If it made your phone nicer to use, a coffee is a good way to say so.
-
-<a href="https://ko-fi.com/darkksh">
-  <img src="https://img.shields.io/badge/Ko--fi-Buy_me_a_coffee-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white" alt="Support on Ko-fi">
-</a>
-
-## Contributing
-
-Pull requests are welcome. The pull request's description has a box for agreeing to the
-[Contributor License Agreement](CLA.md), which gives the project's owner the rights to the
-contribution; it is ticked once, before the first pull request is merged.
-
-## Star history
-
-<a href="https://star-history.com/#skopevoj/spoti.pw&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=skopevoj/spoti.pw&type=Date&theme=dark">
-    <img src="https://api.star-history.com/svg?repos=skopevoj/spoti.pw&type=Date" alt="Star history chart">
-  </picture>
-</a>
+Drafts are never used; if a source is unreachable the previous known-good data is kept
+and flagged rather than replaced with nothing. The two data sources stay separate and
+are labelled on the page: a GitHub release is never presented as an AltSource entry, or
+the other way round. No GitHub token ever reaches the browser.
 
 ## Credits
 
-[cyan](https://github.com/asdfzxcvbn/pyzule-rw) injects, [Theos](https://theos.dev) builds, and
-[FLEX](https://github.com/FLEXTool/FLEX), as hopeless's AutoFLEX build in `vendor/`, is the inspector
-the view trees are read through.
+**Everything users love about this build was made by other people:**
 
-## License
+- **spoti.pw** — Vojtěch Škopek ([skopevoj](https://github.com/skopevoj)) —
+  [repo](https://github.com/skopevoj/spoti.pw) ·
+  support: [Ko-fi](https://ko-fi.com/darkksh)
+- **EeveeSpotify** — Eevee (upstream author); the upstream self-contained deb PwEevee
+  integrates is maintained by jaydenjcpy —
+  no official donation link was found; none is invented here
+- **Orion** ([theos](https://github.com/theos/Orion)), **EeveeSwiftProtobuf**,
+  **CydiaSubstrate** (Saurik) — bundled runtime dependencies, as shipped upstream
+- **libbs2b** (MIT), **WDL/EEL2** (zlib) — vendored by spoti.pw, licenses preserved
 
-Source available under the [PolyForm Strict License 1.0.0](LICENSE): you can read the code and use
-the mod yourself, but not change it, reuse it in other projects or redistribute it. Releases up to
-v0.21.1 were published under GPL-3.0 and stay under it. Files in `vendor/` and `.agents/` keep their
-own licences.
+**This project's contribution** is integration engineering, packaging, validation,
+hosting and documentation — see the full credit page on the website.
 
-Not affiliated with Spotify.
+If you enjoy this build, support the upstream developers. Donations go directly to
+them; nothing is routed through this project.
+
+## AI disclosure
+
+Yes — AI was used to build this project:
+
+- **Freebuff** — main coding/build agent (repository work, implementation, build
+  automation, testing, troubleshooting)
+- **ChatGPT** — prompting, planning, troubleshooting, debugging, research assistance
+- **Human maintainer** — direction, implementation decisions, review, device testing,
+  release decisions; participates directly in development
+
+AI was used as a development tool for this integration project. It is not presented as
+the creator of spoti.pw or EeveeSpotify.
+
+## Maintainer status & continuation
+
+Maintained by **one developer** in available free time. There is **no guaranteed
+release schedule**. If this maintainer stops, someone else may be able to continue the
+project from the available source and the applicable upstream licenses and rights —
+preserving licenses, copyright notices, attribution and upstream requirements. This is
+not a claim of unrestricted redistribution rights.
+
+## License & rights
+
+- spoti.pw 0.22.0: PolyForm Strict 1.0.0 (releases ≤ 0.21.1: GPL-3.0); its vendored
+  third-party code keeps its own licenses
+- EeveeSpotify: as distributed upstream with the self-contained package
+- This project's build scripts, website and documentation: the integration glue of
+  PwEevee — they do not and cannot re-license upstream software
+- Hosting & removal: we may remove, replace, suspend or discontinue any published material
+  at any time; rights-holder requests are reviewed and may result in removal. No claim
+  of legal immunity or of ownership of upstream projects is made anywhere.
+
+Not affiliated with Spotify. Not affiliated with Apple. Not the upstream projects.

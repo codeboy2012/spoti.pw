@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Downloads — PwEevee</title>
+<meta name="description" content="Download the newest PwEevee release straight from its GitHub release assets, with the exact file size and checksum GitHub published. Upstream spoti.pw releases and the SideloadLabs EeveeSpotify IPA variants are listed with their own sources.">
+<!-- Both themes are supported; dark is listed first because it is the default
+     when the device expresses no preference. -->
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#080808" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://pweevee.skytweak.dpdns.org/downloads">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PwEevee">
+<meta property="og:title" content="Download PwEevee">
+<meta property="og:description" content="Download the newest PwEevee release straight from its GitHub release assets, with the exact file size and checksum GitHub published. Upstream spoti.pw releases and the SideloadLabs EeveeSpotify IPA variants are listed with their own sources.">
+<meta property="og:url" content="https://pweevee.skytweak.dpdns.org/downloads">
+<meta property="og:image" content="https://pweevee.skytweak.dpdns.org/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The PwEevee logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Download PwEevee">
+<meta name="twitter:description" content="Download the newest PwEevee release straight from its GitHub release assets, with the exact file size and checksum GitHub published. Upstream spoti.pw releases and the SideloadLabs EeveeSpotify IPA variants are listed with their own sources.">
+<meta name="twitter:image" content="https://pweevee.skytweak.dpdns.org/assets/social-card.png">
+
+<!-- Icons are the official PwEevee logo. The small sizes are downscales of the
+     same file, produced by make-brand-assets.pl; the artwork is not altered. -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icon-512.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+
+<!-- Applies a stored theme override before the first paint. Blocking and placed
+     ahead of the stylesheet on purpose: a deferred script would run too late and
+     the wrong theme would flash. It is an external same-origin file so the strict
+     Content-Security-Policy needs no 'unsafe-inline'. With JavaScript off the
+     theme still follows prefers-color-scheme, defaulting to dark. -->
+<script src="/assets/theme.js"></script>
+
+<link rel="stylesheet" href="/assets/pweevee.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- icon sprite: defined once, referenced with <use> wherever an icon is needed,
+     so the GitHub glyph is not repeated a dozen times per page -->
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 16 16">
+    <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-2.91-.88-2.91-2.84 0-.61.22-1.15.58-1.58-.05-.15-.25-.75.05-1.55 0 0 .61-.19 2 .75a5.1 5.1 0 0 1 1.32-.18c.45 0 .9.06 1.32.18 1.39-.95 2-.75 2-.75.3.8.1 1.4.05 1.55.36.43.58.96.58 1.58 0 1.97-1.14 2.64-2.92 2.84.3.26.56.76.56 1.54 0 1.11-.01 2.01-.01 2.28 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+  </symbol>
+  <!-- theme control: follow the device, light, dark -->
+  <symbol id="i-auto" viewBox="0 0 16 16">
+    <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"
+          d="M2.4 3.2h11.2v7.2H2.4z"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+          d="M5.6 13.2h4.8"/>
+    <path fill="currentColor" d="M8 3.9v5.8a2.9 2.9 0 0 1 0-5.8Z"/>
+  </symbol>
+  <symbol id="i-sun" viewBox="0 0 16 16">
+    <circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+          d="M8 1.3v1.5M8 13.2v1.5M1.3 8h1.5M13.2 8h1.5M3.4 3.4l1 1M11.6 11.6l1 1M12.6 3.4l-1 1M4.4 11.6l-1 1"/>
+  </symbol>
+  <symbol id="i-moon" viewBox="0 0 16 16">
+    <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"
+          d="M13.2 9.8A5.6 5.6 0 0 1 6.2 2.8a5.6 5.6 0 1 0 7 7Z"/>
+  </symbol>
+</svg>
+
+<div class="page">
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="/" aria-label="PwEevee — home">
+      <img class="brand__mark" src="/assets/icon-32.png" alt="" aria-hidden="true" width="28" height="28" decoding="async">
+      <span class="brand__name">PwEevee</span>
+    </a>
+
+    <div class="nav__links">
+      <a class="nav__link" href="/">Home</a>
+      <a class="nav__link" href="/projects">Projects</a>
+      <a class="nav__link" href="/releases">Releases</a>
+      <a class="nav__link" href="/downloads" aria-current="page">Downloads</a>
+      <a class="nav__link" href="/credits">Credits</a>
+    </div>
+
+    <div class="nav__end">
+      <div class="theme" role="group" aria-label="Colour theme" data-theme-control><button class="theme__btn" type="button" data-theme-set="system" aria-pressed="true" title="Match the system theme"><svg class="theme__icon" aria-hidden="true" focusable="false"><use href="#i-auto"></use></svg><span class="visually-hidden">Match the system theme</span></button><button class="theme__btn" type="button" data-theme-set="light" aria-pressed="false" title="Light theme"><svg class="theme__icon" aria-hidden="true" focusable="false"><use href="#i-sun"></use></svg><span class="visually-hidden">Light theme</span></button><button class="theme__btn" type="button" data-theme-set="dark" aria-pressed="false" title="Dark theme"><svg class="theme__icon" aria-hidden="true" focusable="false"><use href="#i-moon"></use></svg><span class="visually-hidden">Dark theme</span></button></div>
+      <a class="nav__icon" href="https://github.com/codeboy2012/spoti.pw-builds" rel="noopener"
+         aria-label="PwEevee on GitHub"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg></a>
+      <a class="btn btn--primary btn--sm nav__cta" href="/downloads">Download</a>
+      <button class="nav__toggle" type="button" data-nav-toggle
+              aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+        <span class="nav__burger" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="nav__drawer" id="nav-drawer" data-nav-drawer>
+      <a class="nav__link" href="/">Home</a>
+      <a class="nav__link" href="/projects">Projects</a>
+      <a class="nav__link" href="/releases">Releases</a>
+      <a class="nav__link" href="/downloads" aria-current="page">Downloads</a>
+      <span class="nav__drawer-sep" aria-hidden="true"></span>
+      <a class="nav__link" href="/credits">Credits</a>
+      <a class="nav__link" href="/development">Development</a>
+      <a class="nav__link" href="/legal">Legal</a>
+      <a class="nav__link" href="/contact">Contact</a>
+      <span class="nav__drawer-sep" aria-hidden="true"></span>
+      <div class="nav__drawer-row">
+        <span class="nav__drawer-label" id="theme-label-drawer">Theme</span>
+        <div class="theme" role="group" aria-labelledby="theme-label-drawer" data-theme-control><button class="theme__btn" type="button" data-theme-set="system" aria-pressed="true" title="Match the system theme"><svg class="theme__icon" aria-hidden="true" focusable="false"><use href="#i-auto"></use></svg><span class="visually-hidden">Match the system theme</span></button><button class="theme__btn" type="button" data-theme-set="light" aria-pressed="false" title="Light theme"><svg class="theme__icon" aria-hidden="true" focusable="false"><use href="#i-sun"></use></svg><span class="visually-hidden">Light theme</span></button><button class="theme__btn" type="button" data-theme-set="dark" aria-pressed="false" title="Dark theme"><svg class="theme__icon" aria-hidden="true" focusable="false"><use href="#i-moon"></use></svg><span class="visually-hidden">Dark theme</span></button></div>
+      </div>
+      <span class="nav__drawer-sep" aria-hidden="true"></span>
+      <a class="nav__link icon-link" href="https://github.com/codeboy2012/spoti.pw-builds" rel="noopener">
+        <svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg><span>GitHub repository</span>
+      </a>
+      <a class="btn btn--primary" href="/downloads">Download</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">Downloads</p>
+      <h1>Get the build.</h1>
+      <p class="lead">
+        Every download here resolves to a <strong>published release asset</strong> — PwEevee's own
+        GitHub release, or the source each upstream project publishes. Nothing is served from a
+        hand-maintained file list, so a button only appears when the file it points at actually
+        exists.
+      </p>
+    </div>
+
+    <div class="reveal"><div class="panel panel--raised panel--hover download accent-brand reveal"><div class="download__head"><div class="download__ident"><span class="download__project"><img class="download__logo" src="/assets/icon-32.png" alt="" aria-hidden="true" width="22" height="22" decoding="async"> PwEevee release</span><h2 class="download__version">v0.22.0</h2><p class="download__date">Released 23 September 2026</p></div><div class="download__badges"><span class="badge badge--latest"><span class="badge__dot"></span>Latest release</span></div></div><div class="download__actions"><a class="btn btn--primary btn--lg btn--stack" href="https://github.com/codeboy2012/spoti.pw-builds/releases/download/v0.22.0/com.spotipw_0.22.0-fixed-bundle-id.ipa" rel="noopener" aria-label="Download com.spotipw_0.22.0-fixed-bundle-id.ipa from the PwEevee GitHub release"><span>Download IPA</span><span class="btn__sub">142 MB &middot; unsigned</span></a><a class="btn btn--outline" href="https://github.com/codeboy2012/spoti.pw-builds/releases/tag/v0.22.0" rel="noopener">Release notes</a><a class="btn btn--outline" href="/releases">Release history</a><a class="btn btn--quiet" href="https://github.com/codeboy2012/spoti.pw-builds" rel="noopener"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg><span>GitHub repository</span></a></div><div class="download__files"><div class="asset"><span class="asset__kind" aria-hidden="true">ipa</span><span class="asset__info"><span class="asset__name">com.spotipw_0.22.0-fixed-bundle-id.ipa</span><span class="asset__sub">142 MB &middot; sha256 57e63e77561362ad&hellip;</span></span><span class="asset__action"><a class="btn btn--outline btn--sm" href="https://github.com/codeboy2012/spoti.pw-builds/releases/download/v0.22.0/com.spotipw_0.22.0-fixed-bundle-id.ipa" rel="noopener" aria-label="Download com.spotipw_0.22.0-fixed-bundle-id.ipa">Download</a></span></div><div class="asset"><span class="asset__kind" aria-hidden="true">ipa</span><span class="asset__info"><span class="asset__name">Spotify-Decrypted.ipa</span><span class="asset__sub">154 MB &middot; sha256 954124af0640c1a7&hellip;</span></span><span class="asset__action"><a class="btn btn--outline btn--sm" href="https://github.com/codeboy2012/spoti.pw-builds/releases/download/v0.22.0/Spotify-Decrypted.ipa" rel="noopener" aria-label="Download Spotify-Decrypted.ipa">Download</a></span></div><div class="asset"><span class="asset__kind" aria-hidden="true">deb</span><span class="asset__info"><span class="asset__name">com.spotipw_0.22.0_iphoneos-arm.deb</span><span class="asset__sub">475 KB &middot; sha256 b45c34760aa082d5&hellip;</span></span><span class="asset__action"><a class="btn btn--outline btn--sm" href="https://github.com/codeboy2012/spoti.pw-builds/releases/download/v0.22.0/com.spotipw_0.22.0_iphoneos-arm.deb" rel="noopener" aria-label="Download com.spotipw_0.22.0_iphoneos-arm.deb">Download</a></span></div></div><div class="download__files"><div class="kv__row"><span class="kv__k">SHA-256 of the file</span><div class="hash"><code class="hash__value" id="sha-pweevee">57e63e77561362add315641eb102dd8d5ce8f090882c8e39e65af6e67d6b32d7</code><button class="copy" type="button" data-copy-from="sha-pweevee" aria-label="Copy the SHA-256 checksum"><span data-copy-label>Copy</span></button></div></div></div><dl class="meta"><div><dt>Version</dt><dd class="meta__v mono">v0.22.0</dd></div><div><dt>Published</dt><dd class="meta__v">23 September 2026</dd></div><div><dt>Repository</dt><dd class="meta__v mono">codeboy2012/spoti.pw-builds</dd></div><div><dt>Files</dt><dd class="meta__v">3 assets</dd></div><div><dt>Source</dt><dd class="meta__v">GitHub releases API</dd></div></dl><details class="disclose"><summary>Release notes from the author</summary><div class="disclose__body"><div class="notes"><p class="notes__h">spoti.pw v0.22.0</p><p><strong>Released September 23, 2026</strong></p><p>This release contains the <strong>spoti.pw v0.22.0 IPA builds</strong> based on the upstream project.</p><p>&gt; ⚠️ <strong>Important:</strong> v0.21.1 is the <strong>last spoti.pw release to include Spoof Premium and Hide Ads</strong>. These features are not available in newer releases, so users who specifically want them should use v0.21.1.</p><p>&gt; Important: spoti.pw is a UI tweak for Spotify on iOS. Sign the resulting build with your own certificate.</p><p class="notes__h">Downloads</p><p class="notes__h">Spotify Tweaked</p><p><strong>spoti.pw-v0.22.0.ipa</strong></p><p>Built using the updated spoti.pw v0.22.0 changes.</p><p class="notes__h">Spotify Decrypted</p><p><strong>Spotify-Decrypted.ipa</strong></p><p>This is the same decrypted Spotify IPA carried forward from the previous v0.21.1 release.</p><p class="notes__h">Spotify Tweaks <code>.deb</code></p><p><strong>com.spotipw_0.22.0_iphoneos-arm.deb</strong></p><p><strong>SHA-256:</strong> <code>b45c34760aa082d504b8706a5a766613ed837b5ecdb00329ac6efce910403547</code></p><p class="notes__h">What&#39;s Included</p><p>This build is based on <strong>spoti.pw v0.22.0</strong>, which includes:</p><ul><li>Apple Music-style animated album artwork on the lock screen when a track has no Canvas</li><li>Canvas playback as animated lock-screen artwork</li><li>Audio effects running on the mod&#39;s own engine; libjamesdsp has been removed</li><li>Glass search bar for finding tracks in playlists when pulling down</li><li>Genius lyric line meanings with artist-owned lines shown differently</li><li>Mod &gt; Licenses now shows the mod license and full third-party licenses</li><li>Follow now uses the same glyph/checkmark behavior as Add to Library</li><li>Fixes for long settings notes being truncated</li><li>Fixes for Add to Library and Follow state behavior</li><li>Player menu and lyrics loading fixes</li><li>Playlist cover sizing and fade fixes while pulling down</li><li>Fix for the redesigned player being able to scroll upward</li></ul><p>For the complete upstream changelog, see the <a href="https://github.com/skopevoj/spoti.pw/releases/tag/v0.22.0)](<a href="https://github.com/skopevoj/spoti.pw/releases/tag/v0.22.0" rel="noopener nofollow ugc" target="_blank">https://github.com/skopevoj/spoti.pw/releases/tag/v0.22.0</a>" rel="noopener nofollow ugc" target="_blank">[v0.22.0 upstream release</a>.</p><p class="notes__h">Installation</p><p>The IPA is <strong>unsigned</strong> and must be signed before installation.</p><p>Compatible signing methods include:</p><ul><li><strong>SideStore</strong></li><li><strong>AltStore</strong></li><li><strong>Feather</strong></li><li><strong>Sideloadly</strong></li><li>Other compatible IPA signing tools</li></ul><p>Your signing certificate and provisioning profile are your responsibility.</p><p class="notes__h">Important</p><ul><li>This project is <strong>not affiliated with Spotify</strong>.</li><li>Installation and signing are performed at your own risk.</li></ul><p class="notes__h">Credits</p><p>Built from the upstream <a href="https://github.com/skopevoj/spoti.pw)](<a href="https://github.com/skopevoj/spoti.pw" rel="noopener nofollow ugc" target="_blank">https://github.com/skopevoj/spoti.pw</a>" rel="noopener nofollow ugc" target="_blank">[skopevoj/spoti.pw</a> project.</p><p>All original development and source-code changes belong to the upstream project and its contributors.</p><p>This repository primarily provides <strong>built IPA releases</strong>.</p><p class="notes__h">Support the upstream project</p><p>If you enjoy spoti.pw, consider supporting the developers through Ko-fi.</p><p><strong>Upstream:</strong> <a href="https://github.com/skopevoj/spoti.pw)](<a href="https://github.com/skopevoj/spoti.pw" rel="noopener nofollow ugc" target="_blank">https://github.com/skopevoj/spoti.pw</a>" rel="noopener nofollow ugc" target="_blank">[github.com/skopevoj/spoti.pw</a></p><p><strong>License:</strong> GPL-3.0</p></div></div></details></div></div>
+
+    <div class="callout mt-6">
+      <p class="mb-0">
+        <strong>Before you install.</strong> PwEevee builds are <strong>unsigned</strong> — sign them
+        with your own certificate (SideStore, Feather, AltStore, Sideloadly, …). Compatibility is
+        listed only where it was actually verified; untested combinations are never claimed as
+        supported.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--seam">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">EeveeSpotify &middot; SideloadLabs AltSource</p>
+      <h2>EeveeSpotify IPA variants</h2>
+      <p class="lead">
+        SideloadLabs publishes ready-to-install IPAs in an AltStore-format source. Each build comes
+        in a <strong>Standard</strong> and a <strong>Patched</strong> variant — pick by how you sign
+        apps, not by version. Every fact below, including the download URL, is read from that source.
+      </p>
+    </div>
+
+    <section class="variant-family accent-neutral reveal" data-reveal-group="variants"><div class="variant-family__head"><div><h3 class="variant-family__name">EeveeSpotifyReincarnated</h3><p class="variant-family__note">The mainline continuation build.</p></div><dl class="variant-family__facts"><div><dt>Spotify</dt><dd class="mono">9.1.76</dd></div><div><dt>EeveeSpotify</dt><dd class="mono">6.6.8(2)</dd></div><div><dt>Published</dt><dd>20 August 2026</dd></div></dl></div><div class="variant-grid"><article class="panel panel--hover variant accent-neutral"><div class="variant__head"><div class="variant__ident"><h4 class="variant__name">Standard</h4><p class="variant__source-name mono">EeveeSpotifyReincarnated</p></div><div class="variant__badges"><span class="badge badge--upstream">Standard</span></div></div><p class="variant__note">Works with a free certificate in AltStore or SideStore.</p><dl class="meta"><div><dt>Variant</dt><dd class="meta__v">Standard</dd></div><div><dt>Spotify</dt><dd class="meta__v mono">9.1.76</dd></div><div><dt>EeveeSpotify</dt><dd class="meta__v mono">6.6.8(2)</dd></div><div><dt>Size</dt><dd class="meta__v">124 MB</dd></div><div><dt>Published</dt><dd class="meta__v">20 August 2026</dd></div></dl><div class="variant__actions"><a class="btn btn--primary btn--stack" href="https://files.catbox.moe/1qbbn8.ipa" rel="noopener" aria-label="Download EeveeSpotifyReincarnated (Standard) from the SideloadLabs source"><span>Download IPA</span><span class="btn__sub">124 MB &middot; standard</span></a></div><details class="disclose"><summary>Description from the source</summary><div class="disclose__body"><p class="small muted mb-0">Spotify Version: v9.1.76, EeveeSpotify Version: 6.6.8(2) Unpatched Version, pls use this if on Altstore/Sidestore, free cert</p><div class="kv__row"><span class="kv__k">Release description</span><span class="kv__v">Updated to Spotify v9.1.76, Full release notes on github</span></div><div class="kv__row"><span class="kv__k">Bundle identifier</span><span class="kv__v mono break">com.spotify.client</span></div><div class="kv__row"><span class="kv__k">Icon</span><span class="kv__v"><a class="break" href="https://files.catbox.moe/9fgova.JPG" rel="noopener nofollow">https://files.catbox.moe/9fgova.JPG</a></span></div></div></details></article><article class="panel panel--hover variant accent-neutral"><div class="variant__head"><div class="variant__ident"><h4 class="variant__name">Patched</h4><p class="variant__source-name mono">EeveeSpotifyReincarnated(PATCHED)</p></div><div class="variant__badges"><span class="badge badge--prerelease">Patched</span></div></div><p class="variant__note">Requires a paid certificate, a jailbreak or TrollStore.</p><dl class="meta"><div><dt>Variant</dt><dd class="meta__v">Patched</dd></div><div><dt>Spotify</dt><dd class="meta__v mono">9.1.76</dd></div><div><dt>EeveeSpotify</dt><dd class="meta__v mono">6.6.8(2)</dd></div><div><dt>Size</dt><dd class="meta__v">12.4 MB</dd></div><div><dt>Published</dt><dd class="meta__v">20 August 2026</dd></div></dl><div class="variant__actions"><a class="btn btn--primary btn--stack" href="https://files.catbox.moe/6c9ji8.ipa" rel="noopener" aria-label="Download EeveeSpotifyReincarnated(PATCHED) (Patched) from the SideloadLabs source"><span>Download IPA</span><span class="btn__sub">12.4 MB &middot; patched</span></a></div><details class="disclose"><summary>Description from the source</summary><div class="disclose__body"><p class="small muted mb-0">Spotify Version: v9.1.76, EeveeSpotify Version: 6.6.8(2). Patched version, use this only if you&#39;re using paid cert, jailbroken, or trollstore</p><div class="kv__row"><span class="kv__k">Release description</span><span class="kv__v">Updated to Spotify v9.1.76, Full release notes on github</span></div><div class="kv__row"><span class="kv__k">Bundle identifier</span><span class="kv__v mono break">com.spotify.client.patched</span></div><div class="kv__row"><span class="kv__k">Icon</span><span class="kv__v"><a class="break" href="https://files.catbox.moe/9fgova.JPG" rel="noopener nofollow">https://files.catbox.moe/9fgova.JPG</a></span></div></div></details></article></div></section><section class="variant-family accent-neutral reveal" data-reveal-group="variants"><div class="variant-family__head"><div><h3 class="variant-family__name">ESR Liquid Glass</h3><p class="variant-family__note">The Liquid Glass interface variant of the same tweak.</p></div><dl class="variant-family__facts"><div><dt>Spotify</dt><dd class="mono">9.1.76</dd></div><div><dt>EeveeSpotify</dt><dd class="mono">6.6.8(2)</dd></div><div><dt>Published</dt><dd>20 August 2026</dd></div></dl></div><div class="variant-grid"><article class="panel panel--hover variant accent-neutral"><div class="variant__head"><div class="variant__ident"><h4 class="variant__name">Standard</h4><p class="variant__source-name mono">ESR Liquid Glass</p></div><div class="variant__badges"><span class="badge badge--upstream">Standard</span></div></div><p class="variant__note">Works with a free certificate in AltStore or SideStore.</p><dl class="meta"><div><dt>Variant</dt><dd class="meta__v">Standard</dd></div><div><dt>Spotify</dt><dd class="meta__v mono">9.1.76</dd></div><div><dt>EeveeSpotify</dt><dd class="meta__v mono">6.6.8(2)</dd></div><div><dt>Size</dt><dd class="meta__v">12.4 MB</dd></div><div><dt>Published</dt><dd class="meta__v">20 August 2026</dd></div></dl><div class="variant__actions"><a class="btn btn--primary btn--stack" href="https://files.catbox.moe/bqxqbx.ipa" rel="noopener" aria-label="Download ESR Liquid Glass (Standard) from the SideloadLabs source"><span>Download IPA</span><span class="btn__sub">12.4 MB &middot; standard</span></a></div><details class="disclose"><summary>Description from the source</summary><div class="disclose__body"><p class="small muted mb-0">Spotify Version: v9.1.76, EeveeSpotify Version: 6.6.8(2). Unpatched Liquid Glass version, use this only if you&#39;re using paid cert, jailbroken, or trollstore</p><div class="kv__row"><span class="kv__k">Release description</span><span class="kv__v">Updated to Spotify v9.1.76, Full release notes on github</span></div><div class="kv__row"><span class="kv__k">Bundle identifier</span><span class="kv__v mono break">com.spotify.client.lg</span></div><div class="kv__row"><span class="kv__k">Icon</span><span class="kv__v"><a class="break" href="https://files.catbox.moe/9fgova.JPG" rel="noopener nofollow">https://files.catbox.moe/9fgova.JPG</a></span></div></div></details></article><article class="panel panel--hover variant accent-neutral"><div class="variant__head"><div class="variant__ident"><h4 class="variant__name">Patched</h4><p class="variant__source-name mono">ESR Liquid Glass Patched</p></div><div class="variant__badges"><span class="badge badge--prerelease">Patched</span></div></div><p class="variant__note">Requires a paid certificate, a jailbreak or TrollStore.</p><dl class="meta"><div><dt>Variant</dt><dd class="meta__v">Patched</dd></div><div><dt>Spotify</dt><dd class="meta__v mono">9.1.76</dd></div><div><dt>EeveeSpotify</dt><dd class="meta__v mono">6.6.8(2)</dd></div><div><dt>Size</dt><dd class="meta__v">12.4 MB</dd></div><div><dt>Published</dt><dd class="meta__v">20 August 2026</dd></div></dl><div class="variant__actions"><a class="btn btn--primary btn--stack" href="https://files.catbox.moe/ey63w2.ipa" rel="noopener" aria-label="Download ESR Liquid Glass Patched (Patched) from the SideloadLabs source"><span>Download IPA</span><span class="btn__sub">12.4 MB &middot; patched</span></a></div><details class="disclose"><summary>Description from the source</summary><div class="disclose__body"><p class="small muted mb-0">Spotify Version: v9.1.76, EeveeSpotify Version: 6.6.8(2). Patched Liquid Glass version, use this only if you&#39;re using paid cert, jailbroken, or trollstore</p><div class="kv__row"><span class="kv__k">Release description</span><span class="kv__v">Updated to Spotify v9.1.76, Full release notes on github</span></div><div class="kv__row"><span class="kv__k">Bundle identifier</span><span class="kv__v mono break">com.spotify.client.lg.patch</span></div><div class="kv__row"><span class="kv__k">Icon</span><span class="kv__v"><a class="break" href="https://files.catbox.moe/9fgova.JPG" rel="noopener nofollow">https://files.catbox.moe/9fgova.JPG</a></span></div></div></details></article></div></section>
+
+    <div class="split mt-6">
+      <div class="panel pad accent-neutral"><p class="eyebrow">Source</p><h3>Where these variants come from</h3><p class="muted mt-4 measure">An AltStore-format source published by SideloadLabs. It lists the installable IPA variants and their download URLs. It is NOT a GitHub release; the two are shown separately and labelled. The repository path is spelled SideloasLabs-AltSource upstream and is used exactly as published.</p><div class="kv mt-5"><div class="kv__row"><span class="kv__k">Source</span><span class="kv__v">SideloadLabs Repo</span></div><div class="kv__row"><span class="kv__k">Identifier</span><span class="kv__v"><span class="mono">com.sideloadlabs.source</span></span></div><div class="kv__row"><span class="kv__k">Published by</span><span class="kv__v">SideloadLabs</span></div><div class="kv__row"><span class="kv__k">Repository</span><span class="kv__v"><a class="mono break" href="https://github.com/SideloadLabs/SideloasLabs-AltSource" rel="noopener">SideloadLabs/SideloasLabs-AltSource</a></span></div><div class="kv__row"><span class="kv__k">Manifest</span><span class="kv__v"><a class="mono break" href="https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/refs/heads/main/apps.json" rel="noopener">https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/refs/heads/main/apps.json</a></span></div><div class="kv__row"><span class="kv__k">Variants listed</span><span class="kv__v">4</span></div><div class="kv__row"><span class="kv__k">Kind</span><span class="kv__v">AltStore-format source manifest — not a GitHub release</span></div><div class="kv__row"><span class="kv__k">Subtitle</span><span class="kv__v">SideloadLabs latest ipas</span></div><div class="kv__row"><span class="kv__k">Description</span><span class="kv__v">SideloadLabs&#39; ipa files 
+ -Our Telegram Channel: https://t.me/compiledipas</span></div><div class="kv__row"><span class="kv__k">Source icon</span><span class="kv__v"><a class="mono break" href="https://avatars.githubusercontent.com/u/312393257?s=96&amp;v=4" rel="noopener nofollow">https://avatars.githubusercontent.com/u/312393257?s=96&amp;v=4</a></span></div></div></div>
+      <div class="panel pad">
+        <h3>Standard or Patched?</h3>
+        <ul class="checklist mt-4">
+          <li><strong>Standard</strong> — unpatched, intended for a free certificate in AltStore or
+              SideStore</li>
+          <li><strong>Patched</strong> — intended for a paid certificate, a jailbreak or
+              TrollStore</li>
+          <li><strong>Liquid Glass</strong> — the same tweak with the Liquid Glass interface</li>
+        </ul>
+        <p class="small dim mt-4 mb-0">
+          These variants come from SideloadLabs, not from PwEevee, and they are a different thing
+          from the EeveeSpotify GitHub release shown below. Install questions belong with the
+          publisher.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">Upstream</p>
+      <h2>Upstream GitHub releases</h2>
+      <p class="lead">
+        These come from the upstream projects' own GitHub releases, not from PwEevee. They are listed
+        here so the components inside a PwEevee build can be traced back to their source.
+      </p>
+    </div>
+    <div class="grid grid--2">
+      <div class="panel panel--raised panel--hover download accent-neutral reveal"><div class="download__head"><div class="download__ident"><span class="download__project"><span aria-hidden="true">◇</span> spoti.pw</span><h3 class="download__version">v0.22.0</h3><p class="download__date">Released 23 September 2026</p></div><div class="download__badges"><span class="badge badge--latest"><span class="badge__dot"></span>Latest release</span><span class="badge badge--upstream">Upstream project</span></div></div><div class="download__actions"><a class="btn btn--primary btn--lg btn--stack" href="https://github.com/skopevoj/spoti.pw/releases/download/v0.22.0/com.spotipw_0.22.0_iphoneos-arm.deb" rel="noopener" aria-label="Download com.spotipw_0.22.0_iphoneos-arm.deb from the spoti.pw GitHub release"><span>Download DEB</span><span class="btn__sub">475 KB</span></a><a class="btn btn--outline" href="https://github.com/skopevoj/spoti.pw/releases/tag/v0.22.0" rel="noopener">Release notes</a><a class="btn btn--quiet" href="https://github.com/skopevoj/spoti.pw" rel="noopener"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg><span>GitHub repository</span></a></div><div class="download__files"><div class="asset"><span class="asset__kind" aria-hidden="true">deb</span><span class="asset__info"><span class="asset__name">com.spotipw_0.22.0_iphoneos-arm.deb</span><span class="asset__sub">475 KB &middot; sha256 b45c34760aa082d5&hellip;</span></span><span class="asset__action"><a class="btn btn--outline btn--sm" href="https://github.com/skopevoj/spoti.pw/releases/download/v0.22.0/com.spotipw_0.22.0_iphoneos-arm.deb" rel="noopener" aria-label="Download com.spotipw_0.22.0_iphoneos-arm.deb">Download</a></span></div></div><div class="download__files"><div class="kv__row"><span class="kv__k">SHA-256 of the file</span><div class="hash"><code class="hash__value" id="sha-spotipw">b45c34760aa082d504b8706a5a766613ed837b5ecdb00329ac6efce910403547</code><button class="copy" type="button" data-copy-from="sha-spotipw" aria-label="Copy the SHA-256 checksum"><span data-copy-label>Copy</span></button></div></div></div><dl class="meta"><div><dt>Version</dt><dd class="meta__v mono">v0.22.0</dd></div><div><dt>Published</dt><dd class="meta__v">23 September 2026</dd></div><div><dt>Repository</dt><dd class="meta__v mono">skopevoj/spoti.pw</dd></div><div><dt>Files</dt><dd class="meta__v">1 asset</dd></div><div><dt>Source</dt><dd class="meta__v">GitHub releases API</dd></div></dl><details class="disclose"><summary>Release notes from the author</summary><div class="disclose__body"><div class="notes"><p class="notes__h"><a href="https://github.com/skopevoj/spoti.pw/compare/v0.21.1...v0.22.0" rel="noopener nofollow ugc" target="_blank">0.22.0</a> (2026-09-23)</p><p class="notes__h">Features</p><ul><li>Apple Music&#39;s animated album cover on the lock screen where the track has no Canvas (<a href="https://github.com/skopevoj/spoti.pw/commit/e0d55383bc26149d7f3f5c803d07df0d0cf0e8bc)" rel="noopener nofollow ugc" target="_blank">e0d5538</a></li><li>audio effects run on the mod&#39;s own engine, libjamesdsp is gone (<a href="https://github.com/skopevoj/spoti.pw/commit/413b2d3e5647822961b3f9eed317c9accf729a4c)" rel="noopener nofollow ugc" target="_blank">413b2d3</a></li><li>find in playlist as a glass search bar above the header, shown on pull-down (<a href="https://github.com/skopevoj/spoti.pw/issues/81)" rel="noopener nofollow ugc" target="_blank">#81</a> (<a href="https://github.com/skopevoj/spoti.pw/commit/36ed0a798fb2f7756e8e62f2e0ee893b8329a1b8)" rel="noopener nofollow ugc" target="_blank">36ed0a7</a></li><li>line meanings from Genius on the lyrics, a bubble for the artist&#39;s own and an underline for the rest, opened in a sheet (<a href="https://github.com/skopevoj/spoti.pw/commit/950baf778f6aa342176f293bc2ab00f0e960640a)" rel="noopener nofollow ugc" target="_blank">950baf7</a></li><li>Mod &gt; Licenses shows the mod&#39;s license and the full text of the third-party ones (<a href="https://github.com/skopevoj/spoti.pw/commit/c790445c70fcf6d0dea07b9550fa6d64a7fb87b7)" rel="noopener nofollow ugc" target="_blank">c790445</a></li><li>play the track&#39;s Canvas as the lock screen&#39;s animated artwork (<a href="https://github.com/skopevoj/spoti.pw/commit/c4b75e3785de5a49407cd6762fb8cc30c26cf5fa)" rel="noopener nofollow ugc" target="_blank">c4b75e3</a></li><li>the artist&#39;s Follow is a glyph that turns into a checkmark, as add to library does (<a href="https://github.com/skopevoj/spoti.pw/issues/88)" rel="noopener nofollow ugc" target="_blank">#88</a> (<a href="https://github.com/skopevoj/spoti.pw/commit/f10bf8d88e7d4a126ad143a77280999a64ab1c58)" rel="noopener nofollow ugc" target="_blank">f10bf8d</a></li></ul><p class="notes__h">Fixes</p><ul><li>a long note under a settings section shows in full instead of ending in an ellipsis (<a href="https://github.com/skopevoj/spoti.pw/commit/a6b187684356c83dad10cda2213f933886d6cc69)" rel="noopener nofollow ugc" target="_blank">a6b1876</a></li><li>add to library turns into a checkmark, and Follow no longer flips from a glyph to a word (<a href="https://github.com/skopevoj/spoti.pw/issues/86" rel="noopener nofollow ugc" target="_blank">#86</a>, <a href="https://github.com/skopevoj/spoti.pw/issues/88)" rel="noopener nofollow ugc" target="_blank">#88</a> (<a href="https://github.com/skopevoj/spoti.pw/commit/e524034ed886ff624761ca2299940d7b143e380f)" rel="noopener nofollow ugc" target="_blank">e524034</a></li><li>the player&#39;s more menu no longer hangs on loading and greys out lyrics for tracks no source has lyrics for (<a href="https://github.com/skopevoj/spoti.pw/issues/93)" rel="noopener nofollow ugc" target="_blank">#93</a> (<a href="https://github.com/skopevoj/spoti.pw/commit/283ac308180468a1e124a3fb1e7a2ab9633d9241)" rel="noopener nofollow ugc" target="_blank">283ac30</a></li><li>the playlist&#39;s cover keeps its size and its fade after the page is pulled down past the top (<a href="https://github.com/skopevoj/spoti.pw/commit/a83562cd928fa7a710d8a28ddd32c9e7486a0fa7)" rel="noopener nofollow ugc" target="_blank">a83562c</a></li><li>the redesigned player can no longer be scrolled up (<a href="https://github.com/skopevoj/spoti.pw/issues/83)" rel="noopener nofollow ugc" target="_blank">#83</a> (<a href="https://github.com/skopevoj/spoti.pw/commit/62eee3363981310b0e3d3c79e60acb2f9c309182)" rel="noopener nofollow ugc" target="_blank">62eee33</a></li></ul></div></div></details></div>
+      <div class="panel panel--raised panel--hover download accent-neutral reveal"><div class="download__head"><div class="download__ident"><span class="download__project"><span aria-hidden="true">◈</span> EeveeSpotify</span><h3 class="download__version">v6.6.8</h3><p class="download__date">Released 19 August 2026</p></div><div class="download__badges"><span class="badge badge--latest"><span class="badge__dot"></span>Latest release</span><span class="badge badge--upstream">Upstream project</span></div></div><div class="download__actions"><a class="btn btn--primary btn--lg btn--stack" href="https://github.com/SideloadLabs/EeveeSpotifyReincarnated/releases/download/v6.6.8/com.eevee.spotify_6.6.8_iphoneos-arm64.deb" rel="noopener" aria-label="Download com.eevee.spotify_6.6.8_iphoneos-arm64.deb from the EeveeSpotify GitHub release"><span>Download DEB</span><span class="btn__sub">1.9 MB</span></a><a class="btn btn--outline" href="https://github.com/SideloadLabs/EeveeSpotifyReincarnated/releases/tag/v6.6.8" rel="noopener">Release notes</a><a class="btn btn--quiet" href="https://github.com/SideloadLabs/EeveeSpotifyReincarnated" rel="noopener"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg><span>GitHub repository</span></a></div><div class="download__files"><div class="asset"><span class="asset__kind" aria-hidden="true">deb</span><span class="asset__info"><span class="asset__name">com.eevee.spotify_6.6.8_iphoneos-arm64.deb</span><span class="asset__sub">1.9 MB &middot; sha256 e04ef60a509a47bb&hellip;</span></span><span class="asset__action"><a class="btn btn--outline btn--sm" href="https://github.com/SideloadLabs/EeveeSpotifyReincarnated/releases/download/v6.6.8/com.eevee.spotify_6.6.8_iphoneos-arm64.deb" rel="noopener" aria-label="Download com.eevee.spotify_6.6.8_iphoneos-arm64.deb">Download</a></span></div><div class="asset"><span class="asset__kind" aria-hidden="true">deb</span><span class="asset__info"><span class="asset__name">com.eevee.spotify_6.6.8_iphoneos-arm64e-roothide.deb</span><span class="asset__sub">2.0 MB &middot; sha256 a3ca60351ac8a790&hellip;</span></span><span class="asset__action"><a class="btn btn--outline btn--sm" href="https://github.com/SideloadLabs/EeveeSpotifyReincarnated/releases/download/v6.6.8/com.eevee.spotify_6.6.8_iphoneos-arm64e-roothide.deb" rel="noopener" aria-label="Download com.eevee.spotify_6.6.8_iphoneos-arm64e-roothide.deb">Download</a></span></div><div class="asset"><span class="asset__kind" aria-hidden="true">file</span><span class="asset__info"><span class="asset__name">txt.txt</span><span class="asset__sub">67 bytes &middot; sha256 86735daf9541dbeb&hellip;</span></span><span class="asset__action"><a class="btn btn--outline btn--sm" href="https://github.com/SideloadLabs/EeveeSpotifyReincarnated/releases/download/v6.6.8/txt.txt" rel="noopener" aria-label="Download txt.txt">Download</a></span></div></div><div class="download__files"><div class="kv__row"><span class="kv__k">SHA-256 of the file</span><div class="hash"><code class="hash__value" id="sha-eeveespotify">e04ef60a509a47bb0a74701202a4840a941f80f32ffb38e96c9e8583bd93fa83</code><button class="copy" type="button" data-copy-from="sha-eeveespotify" aria-label="Copy the SHA-256 checksum"><span data-copy-label>Copy</span></button></div></div></div><dl class="meta"><div><dt>Version</dt><dd class="meta__v mono">v6.6.8</dd></div><div><dt>Published</dt><dd class="meta__v">19 August 2026</dd></div><div><dt>Repository</dt><dd class="meta__v mono">SideloadLabs/EeveeSpotifyReincarnated</dd></div><div><dt>Files</dt><dd class="meta__v">3 assets</dd></div><div><dt>Source</dt><dd class="meta__v">GitHub releases API</dd></div></dl><details class="disclose"><summary>Release notes from the author</summary><div class="disclose__body"><div class="notes"><p class="notes__h">Release Notes:</p><p>New Features:</p><ul><li>Clean Share Links 743f3dc</li><li>Prank for my friend 02fa97a</li></ul><p>Improved :</p><ul><li>Support for Spotify 9.1.72 and .74</li><li>Crossfade can be fixed by enabling overwrite configuration, will find a better solution in the future</li></ul><p><strong>Non-Patched for SideStore, AltStore, sideloadly, LiveContainer, free leaked enterprise cert.”</strong></p><p><strong>Patched = for jailbroken, TrollStore or paid cert</strong></p><p><strong>ESign will cause crash</strong></p><p>@SideloadLabs team:<br>@faroukbmiled<br>@M0d-4<br>@jaydenjcpy</p><p>Donation Links:<br><a href="https://buymeacoffee.com/axryuk" rel="noopener nofollow ugc" target="_blank">faroukbmiled</a><br><a href="https://ko-fi.com/jaydenjcpy" rel="noopener nofollow ugc" target="_blank">jaydenjcpy</a><br><a href="https://ko-fi.com/mo0d4" rel="noopener nofollow ugc" target="_blank">Mod4</a></p><p><strong>Join <a href="https://t.me/compiledipas" rel="noopener nofollow ugc" target="_blank">TG channel</a> to receive news on development</strong></p><p><strong>VIEW TXT FILE</strong></p></div></div></details></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--seam">
+  <div class="wrap">
+    <div class="split">
+      <div class="panel pad">
+        <h3>Looking for an older build?</h3>
+        <p class="muted mt-4">
+          Every release each project has published stays on its own GitHub releases page, and the
+          release history here lists them with their dates, notes and assets.
+        </p>
+        <p class="small dim">
+          We do not promise GitHub will retain releases forever, and we do not delete releases from
+          repositories we do not own.
+        </p>
+        <a class="btn btn--outline mt-4" href="/releases">Full release history</a>
+      </div>
+      <div class="panel pad">
+        <h3>Where each download comes from</h3>
+        <div class="kv mt-4">
+          <div class="kv__row">
+            <span class="kv__k">PwEevee</span>
+            <span class="kv__v">Its own GitHub release assets, read from the GitHub API.</span>
+          </div>
+          <div class="kv__row">
+            <span class="kv__k">spoti.pw</span>
+            <span class="kv__v">The upstream project's GitHub release assets.</span>
+          </div>
+          <div class="kv__row">
+            <span class="kv__k">EeveeSpotify</span>
+            <span class="kv__v">The upstream GitHub release for source and notes; the SideloadLabs
+              AltSource for installable IPA variants.</span>
+          </div>
+        </div>
+        <p class="small dim mt-5 mb-0">GitHub release data generated 26 September 2026 &middot; SideloadLabs AltSource read 26 September 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="section__head">
+      <h2 class="h-sub">How to verify a download</h2>
+    </div>
+    <ol class="pipeline">
+      <li>copy the SHA-256 shown on the release you downloaded, where the publisher provided one</li>
+      <li>hash your file locally — <code>shasum -a 256 &lt;file&gt;.ipa</code> on macOS or Linux,
+          <code>Get-FileHash &lt;file&gt;.ipa</code> in PowerShell</li>
+      <li>compare the two values; they must match exactly, character for character</li>
+      <li>if they differ, do not install the file — re-download it and check again</li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer inverted">
+  <div class="starfield" data-starfield aria-hidden="true"><canvas class="starfield__canvas"></canvas></div>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/" aria-label="PwEevee — home">
+          <img class="brand__mark" src="/assets/icon-32.png" alt="" aria-hidden="true" width="28" height="28" decoding="async">
+          <span class="brand__name">PwEevee</span>
+        </a>
+        <p class="footer__about">
+          An independent integration and distribution project: one tested Spotify IPA
+          carrying two upstream tweaks, published through GitHub releases, created by others.
+        </p>
+        <a class="icon-link" href="https://github.com/codeboy2012/spoti.pw-builds" rel="noopener">
+          <svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg><span>codeboy2012/spoti.pw-builds</span>
+        </a>
+      </div>
+
+      <div class="footer__col">
+        <h3>Projects</h3>
+        <ul>
+          <li><a href="/projects/pweevee">PwEevee</a></li>
+          <li><a href="/projects/spotipw">spoti.pw</a></li>
+          <li><a href="/projects/eeveespotify">EeveeSpotify</a></li>
+          <li><a href="/projects">All projects</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Releases</h3>
+        <ul>
+          <li><a href="/downloads">Downloads</a></li>
+          <li><a href="/releases">Release history</a></li>
+          <li><a href="https://github.com/codeboy2012/spoti.pw-builds/releases" rel="noopener">GitHub releases</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Repositories</h3>
+        <ul>
+          <li><a href="https://github.com/codeboy2012/spoti.pw-builds" rel="noopener">PwEevee</a></li>
+          <li><a href="https://github.com/skopevoj/spoti.pw" rel="noopener">spoti.pw</a></li>
+          <li><a href="https://github.com/SideloadLabs/EeveeSpotifyReincarnated" rel="noopener">EeveeSpotify</a></li>
+          <li><a href="https://github.com/SideloadLabs/SideloasLabs-AltSource" rel="noopener">SideloadLabs AltSource</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Project</h3>
+        <ul>
+          <li><a href="/credits">Credits</a></li>
+          <li><a href="/development">Development &amp; AI</a></li>
+          <li><a href="/legal">Legal</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__credits">
+      <p>
+        <strong>Attribution.</strong> PwEevee integrates components and work from the
+        <a href="https://github.com/skopevoj/spoti.pw" rel="noopener">spoti.pw</a> and
+        <a href="https://github.com/SideloadLabs/EeveeSpotifyReincarnated" rel="noopener">EeveeSpotify</a>
+        projects. It did not create them and does not own them. Please visit their official
+        repositories for upstream information and attribution. PwEevee is maintained here;
+        spoti.pw and EeveeSpotifyReincarnated are separate upstream projects with their own authors
+        and licenses. The IPA variants listed for EeveeSpotify are published by
+        <a href="https://github.com/SideloadLabs" rel="noopener">SideloadLabs</a> in their own
+        AltSource, which PwEevee reads but does not own or mirror.
+        <a href="/credits">Full credits</a>.
+      </p>
+      <p>
+        Not affiliated with, endorsed by or connected to Spotify AB, Apple Inc., spoti.pw,
+        EeveeSpotify or SideloadLabs. All trademarks belong to their respective owners. Hosted on
+        SkyTweak infrastructure; hosted material may be removed, replaced or discontinued at any
+        time.
+      </p>
+      <div class="footer__legal">
+        <span>Canonical: <code>pweevee.skytweak.dpdns.org</code></span>
+        <span>GitHub release data generated 26 September 2026 &middot; SideloadLabs AltSource read 26 September 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script src="/assets/pweevee.js" defer></script>
+</body>
+</html>

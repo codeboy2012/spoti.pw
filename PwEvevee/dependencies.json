@@ -1,0 +1,46 @@
+{
+  "$comment": "Dependency resolution policy for the unified build. Every dependency is declared once; a component supplying something already supplied is a hard build failure unless the copies are byte-identical. expected_load_commands is byte-audited against the proven com.spotipw_0.22.0.ipa executable (ncmds 153, sizeofcmds 16680).",
+
+  "shared_dependencies": {
+    "CydiaSubstrate.framework": {
+      "provider": "PwEvevee/shared-dependencies/cydiasubstrate",
+      "install": "Frameworks/CydiaSubstrate.framework",
+      "loaded_by": "main executable",
+      "conflicts": []
+    },
+    "Orion.framework": {
+      "provider": "Evevee Spotify/component/frameworks/Orion.framework",
+      "install": "Frameworks/Orion.framework",
+      "loaded_by": ["main executable", "EeveeSpotify.dylib"],
+      "conflicts": []
+    },
+    "EeveeSwiftProtobuf.framework": {
+      "provider": "Evevee Spotify/component/frameworks/EeveeSwiftProtobuf.framework",
+      "install": "Frameworks/EeveeSwiftProtobuf.framework",
+      "loaded_by": ["main executable", "EeveeSpotify.dylib"],
+      "conflicts": []
+    }
+  },
+
+  "load_commands": [
+    { "name": "@executable_path/Frameworks/spotifyglass.dylib", "kind": "LC_LOAD_DYLIB", "provider": "spotipw" },
+    { "name": "@executable_path/Frameworks/EeveeSwiftProtobuf.framework/EeveeSwiftProtobuf", "kind": "LC_LOAD_DYLIB", "provider": "eeveespotify" },
+    { "name": "@executable_path/Frameworks/Orion.framework/Orion", "kind": "LC_LOAD_DYLIB", "provider": "eeveespotify" },
+    { "name": "@executable_path/Frameworks/EeveeSpotify.dylib", "kind": "LC_LOAD_DYLIB", "provider": "eeveespotify" },
+    { "name": "@executable_path/Frameworks/CydiaSubstrate.framework/CydiaSubstrate", "kind": "LC_LOAD_DYLIB", "provider": "shared" }
+  ],
+
+  "expected_load_commands": [
+    { "name": "@executable_path/Frameworks/spotifyglass.dylib" },
+    { "name": "@executable_path/Frameworks/EeveeSwiftProtobuf.framework/EeveeSwiftProtobuf" },
+    { "name": "@executable_path/Frameworks/Orion.framework/Orion" },
+    { "name": "@executable_path/Frameworks/EeveeSpotify.dylib" },
+    { "name": "@executable_path/Frameworks/CydiaSubstrate.framework/CydiaSubstrate" }
+  ],
+
+  "duplicate_policy": {
+    "identical": "allowed - collapse to one copy, note it in the build manifest",
+    "different": "build failure: DUPLICATE DEPENDENCY error naming both suppliers",
+    "message": "DUPLICATE DEPENDENCY: %s supplied by %s and %s"
+  }
+}

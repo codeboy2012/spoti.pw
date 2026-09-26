@@ -1,20 +1,14 @@
+# Local AI/build tooling
+.freebuff/
+
+# Build outputs
+dist/
+
+# Temporary unified build workspace
+PwEvevee/build-system/_work/
+
+# Large IPA/source artifacts
+Evevee Spotify/source-artifacts/*.ipa
+
+# General IPA outputs
 *.ipa
-*.mobileprovision
-*.p12
-.DS_Store
-.signing.env
-Developer/
-Distribution/
-Password*.txt
-__pycache__/
-out/
-trees/*.txt
-tweak/.theos/
-tweak/obj/
-tweak/packages/
-tweak/Sources/Shared/Flags/SGFlagList.m
-/trees/continuous
-/trees/clean
-harness/*/build/
-vendor/*/build/
-/video

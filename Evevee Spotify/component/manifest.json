@@ -1,0 +1,946 @@
+{
+   "extracted_with" : "Evevee Spotify/component/extract-components.pl",
+   "file_count" : 187,
+   "files" : [
+      {
+         "path" : "bundles/EeveeSpotify.bundle/Info.plist",
+         "sha256" : "66cf42f7499f353f3116f752ded3bb9423d460156a06a8c7823cd2951fe759bb",
+         "size" : 82
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/ar-EG.lproj/Localizable.strings",
+         "sha256" : "26b2a08c3e36c36d4da654040c98678fb5a932e3f762b4b66bef88e4a8134aa8",
+         "size" : 20806
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/az.lproj/Localizable.strings",
+         "sha256" : "c8a15388920175c88571c61b4d87198c57660014bf2b1ecf34096cb62d45f193",
+         "size" : 10059
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/bg.lproj/Localizable.strings",
+         "sha256" : "187f4740e70db6c64c4bd30d61803825e0bb6b19f3789a041c3cb5c76d28832f",
+         "size" : 9888
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/ca.lproj/Localizable.strings",
+         "sha256" : "5aa38a0dd7bdf9cf3c809f5023721f7f4f7a15fa3d80c92e74ff74b6988b4a27",
+         "size" : 13082
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/da.lproj/Localizable.strings",
+         "sha256" : "0980724b5c5f8374b5b27e001d8dac264a7f6d139665bc5bfe18e38982ea9473",
+         "size" : 10802
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/de-CH.lproj/Localizable.strings",
+         "sha256" : "2d44ba24a45ab580957f9c7f0a760a74bb74e2b33674916a54bc9e8b4abde619",
+         "size" : 8576
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/de.lproj/Localizable.strings",
+         "sha256" : "597ca64087aa2dbdfd8a2c17f851db27a3534e78b76f54e897e8e213145de8a8",
+         "size" : 11003
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/en.lproj/Localizable.strings",
+         "sha256" : "0f206505ef1de5b78e24549452f16310b1853ac136ce33bef91236f730ec0764",
+         "size" : 15026
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/es.lproj/Localizable.strings",
+         "sha256" : "7c44c55d75f5182a38a9db7ac7e31072701acc020711a2aede4d43bee652c52a",
+         "size" : 12424
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/fa.lproj/Localizable.strings",
+         "sha256" : "2a93ec6978435b521cf0a03cd0f30c6bdb7c96608d19cf15fc6c3696c8c6f538",
+         "size" : 23745
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/fr.lproj/Localizable.strings",
+         "sha256" : "d02d4f35f353e218f09cf8214980211ee5614411db52faf67b67831f93d2807e",
+         "size" : 12398
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/github.png",
+         "sha256" : "c92faffeb8714d6c4cdcfd98d6f80c06b9971af38de9bfcea483e35414c62356",
+         "size" : 8639
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/hr.lproj/Localizable.strings",
+         "sha256" : "06cbeadbd4ca382bffbea6b2396b07829c6c28ad6bf41ae2a5d1060621d96fc7",
+         "size" : 9796
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/hu.lproj/Localizable.strings",
+         "sha256" : "796f6b85147695a3f433524ccead23c738747998a681083965631de76b99f567",
+         "size" : 10878
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/it.lproj/Localizable.strings",
+         "sha256" : "9f3235a89465e27a829237d2345f366f4121c2425252fdff2dd215e47d778594",
+         "size" : 18969
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/ja.lproj/Localizable.strings",
+         "sha256" : "7d85c9e19ae84e9cf1eacc3bad5bbfbdeb7becad37fff35567a27c39860aa1d1",
+         "size" : 6367
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/ko.lproj/Localizable.strings",
+         "sha256" : "4c307d3f4188c0d325662e570fbfc9da5b6b694786f435b92c8563e0363db868",
+         "size" : 5526
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/np.lproj/Localizable.strings",
+         "sha256" : "3cdac51ac0686db4c0d58a544b6d31d89f41aac35250b3d52762561fcf20c411",
+         "size" : 6871
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/pl.lproj/Localizable.strings",
+         "sha256" : "d1a99db46ace9dd306988f4b9f3ba78e6680ba34a78638d883c873350b4e6ed8",
+         "size" : 23836
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/pt-BR.lproj/Localizable.strings",
+         "sha256" : "dd21e85eff89101c0b1f47056abf8250df00439391e87790da31534e90ed67c9",
+         "size" : 9512
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/pt.lproj/Localizable.strings",
+         "sha256" : "dced6e107d290ef812027943ec4958782c8dc5565e16bdf127adf5b3c1400043",
+         "size" : 9848
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/resolveconfiguration.bnk",
+         "sha256" : "67739d75cf86e7d48dcddac0a0a36d5ccc1317f9ef3605b9e5fb0bdc0dd49dc5",
+         "size" : 79724
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/ro.lproj/Localizable.strings",
+         "sha256" : "b72dc0b435c5f52e32ba0c835d7ec050ee5ce08e30b367a29c8b60444646a5ab",
+         "size" : 10531
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/ru.lproj/Localizable.strings",
+         "sha256" : "9467668e1011bc54810b7d35d2d7dc824552b128d65ea241ec256a7db85e89b4",
+         "size" : 11307
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/tr.lproj/Localizable.strings",
+         "sha256" : "3b0152c15e876225070d5f1c63a9fd500b1444337a3e3d05708d91053453fb13",
+         "size" : 11628
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/uk.lproj/Localizable.strings",
+         "sha256" : "1be0995a869c956bf4bc2c7c4e7036be5fa53a553e1e9065d3ba769b6f699528",
+         "size" : 11332
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/vi.lproj/Localizable.strings",
+         "sha256" : "2557288243018daf27307f6c0ec361183d054e8c911652538f7a70f347c10a19",
+         "size" : 24167
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/zh-CN.lproj/Localizable.strings",
+         "sha256" : "8973ca8f317e73746efde5ec8ce34202eeb01e5e0080e5f6af68cbb6178c61a8",
+         "size" : 12163
+      },
+      {
+         "path" : "bundles/EeveeSpotify.bundle/zh-TW.lproj/Localizable.strings",
+         "sha256" : "eef797aaca5749a5badfb83b6e9bb8c060305d9b84ec0054bc7848fd6edd91b6",
+         "size" : 12040
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/EeveeSwiftProtobuf",
+         "sha256" : "ab0ce0f4192ffa0b5510cc17af1d489e8c4efb35dee075b95efeb3e0a7583d69",
+         "size" : 5842992
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/Info.plist",
+         "sha256" : "dea45cd6c8337ff22cbba3349e7ed1bdc440057f9c9c228a8558ca544df03597",
+         "size" : 280
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/Modules/EeveeSwiftProtobuf.swiftmodule/arm64-apple-ios.abi.json",
+         "sha256" : "e5157c4b8d63843073eed7c45a393b52e018d3c2acae916e5cba73242bd51a2d",
+         "size" : 5937573
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/Modules/EeveeSwiftProtobuf.swiftmodule/arm64-apple-ios.swiftdoc",
+         "sha256" : "e3dfd5a059497a9b56ccbcabf6eff309ee86a063eedf9220d1c161b65f98156a",
+         "size" : 437752
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/Modules/EeveeSwiftProtobuf.swiftmodule/arm64-apple-ios.swiftinterface",
+         "sha256" : "7a24abc408da484e33d407ca3bb5c7b486de60018e4cda8de2b81db2ec1e8870",
+         "size" : 200038
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/Modules/EeveeSwiftProtobuf.swiftmodule/arm64-apple-ios.swiftmodule",
+         "sha256" : "32a05716a667534eedd565e9b47834623c711052d0d8e5186d7037b87ee2d0c8",
+         "size" : 1468568
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/Modules/EeveeSwiftProtobuf.swiftmodule/arm64e-apple-ios.abi.json",
+         "sha256" : "e5157c4b8d63843073eed7c45a393b52e018d3c2acae916e5cba73242bd51a2d",
+         "size" : 5937573
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/Modules/EeveeSwiftProtobuf.swiftmodule/arm64e-apple-ios.swiftdoc",
+         "sha256" : "13722628683f6a50b4f4f953a3056cec033409a22a3a474ab6b5fa6dc5fa39d6",
+         "size" : 437752
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/Modules/EeveeSwiftProtobuf.swiftmodule/arm64e-apple-ios.swiftinterface",
+         "sha256" : "c3c9b274a20e11c5a3f1f9a091a37d1a0a79c26bff58c929ae769619814c2a23",
+         "size" : 200039
+      },
+      {
+         "path" : "frameworks/EeveeSwiftProtobuf.framework/Modules/EeveeSwiftProtobuf.swiftmodule/arm64e-apple-ios.swiftmodule",
+         "sha256" : "9c3357cf871f187c335be7eefe4b84c8677458f852a309fd7f55a016c66d7a06",
+         "size" : 1468568
+      },
+      {
+         "path" : "frameworks/Orion.framework/Info.plist",
+         "sha256" : "b3b9ce166f994293d94ed46a81476df2c78db7c25cf076d29571721aaceeb375",
+         "size" : 615
+      },
+      {
+         "path" : "frameworks/Orion.framework/Orion",
+         "sha256" : "290889165a4d156a41ed29c88015083e40b5101153e52fa462f2a25d4942a4e8",
+         "size" : 215232
+      },
+      {
+         "path" : "package/control",
+         "sha256" : "264136d044249599621c8c74eac1fd43adca41c4513e1ecb81497b83c6ca9cbe",
+         "size" : 409
+      },
+      {
+         "path" : "package/dynamic-libraries/EeveeSpotify.dylib",
+         "sha256" : "631d4f17cb5e6d3cd90e67f3043f723e1cb28e11dfca475d67f63657c979de70",
+         "size" : 2563648
+      },
+      {
+         "path" : "package/dynamic-libraries/EeveeSpotify.plist",
+         "sha256" : "2cbc4d64026d206e3f72dca69ed6dc985c9342f278dd97e5e873d0b8f45062d0",
+         "size" : 90
+      },
+      {
+         "path" : "resources/AppIcon60x60@2x.png",
+         "sha256" : "bda520b0af14df7bb532aa87c611ea2e1cf8c899f4a43c4035d133605902b86c",
+         "size" : 12954
+      },
+      {
+         "path" : "resources/AppIcon76x76@2x~ipad.png",
+         "sha256" : "7f0bd48f9df8ec9bb9fe3465cebcf2aa4551e814518faf7a5355719f34f0deff",
+         "size" : 17945
+      },
+      {
+         "path" : "resources/Asta_Liebe(Green)@2x.png",
+         "sha256" : "725d1aacc845950574991d089b9d95d957de81ab7f62bc567980b50627e545f5",
+         "size" : 25159
+      },
+      {
+         "path" : "resources/Asta_Liebe(Green)@2x~ipad.png",
+         "sha256" : "1b115c69c5861c3d447a74fecacdb8d3acd380c7af5f83904d639db5758cd9b9",
+         "size" : 38409
+      },
+      {
+         "path" : "resources/Asta_Liebe(Green)@3x.png",
+         "sha256" : "4518ae419ce98613973c610dc306d59b1aa808c745fcf5b5af152243009ce05f",
+         "size" : 52312
+      },
+      {
+         "path" : "resources/Asta_Liebe(Green)~ipad.png",
+         "sha256" : "0197747584b5949798af88370673282933b5e66667e95b776dfe1edfa18d3df1",
+         "size" : 10752
+      },
+      {
+         "path" : "resources/Asta_Liebe(Red)@2x.png",
+         "sha256" : "6a3cd445d22bb48e6fa917759824b097987392e5ec72a87e7db4fdada3749326",
+         "size" : 25072
+      },
+      {
+         "path" : "resources/Asta_Liebe(Red)@2x~ipad.png",
+         "sha256" : "9deba93cc7ea67bef5207fd4823fb27fcbfa57c919614a928e3da1d45b679b43",
+         "size" : 38875
+      },
+      {
+         "path" : "resources/Asta_Liebe(Red)@3x.png",
+         "sha256" : "7fd7605bc56452eaab0c731cf65909258276716ed6f63fcc4bcad8c5eba68c3c",
+         "size" : 53000
+      },
+      {
+         "path" : "resources/Asta_Liebe(Red)~ipad.png",
+         "sha256" : "aa2d47eec726af7f984182a32d167d7b570b51852fdfededfedf2260d698e1a0",
+         "size" : 10568
+      },
+      {
+         "path" : "resources/EeveeCustom@2x.png",
+         "sha256" : "b31f81924e329dff491908dcf36a7561990a1ee7f75ee2708fc5b8c3ac6ccaf4",
+         "size" : 15269
+      },
+      {
+         "path" : "resources/EeveeCustom@2x~ipad.png",
+         "sha256" : "c60e76d70887bb41aee0a4d75dfa071c64be0fa402ee0ebae6061c8a717fc28e",
+         "size" : 22224
+      },
+      {
+         "path" : "resources/EeveeCustom@3x.png",
+         "sha256" : "1628453c4974a142d1d48a4aa65b638c5570bb3fd710b48a0286ab28bad14c51",
+         "size" : 28853
+      },
+      {
+         "path" : "resources/EeveeCustom~ipad.png",
+         "sha256" : "2ac4e8ba608179e866df5cab019f0bfb08b6b404c1dcc2f3aa5abafb912f2f1d",
+         "size" : 7845
+      },
+      {
+         "path" : "resources/EeveeSpotifyAnime@2x.png",
+         "sha256" : "c6a6152cad01ac58bfe76b07e0c47aa4a0d11bea2e1f8c6bca2b9c74c04169a6",
+         "size" : 18584
+      },
+      {
+         "path" : "resources/EeveeSpotifyAnime@2x~ipad.png",
+         "sha256" : "70de1bd2e13f6ecd64a16b13daec993bd5524337a6475994675412083660cf87",
+         "size" : 27601
+      },
+      {
+         "path" : "resources/EeveeSpotifyAnime@3x.png",
+         "sha256" : "044085599104b3e69ba4ef816d65de7492f62724a7546c8b996eb03a243dc77b",
+         "size" : 37375
+      },
+      {
+         "path" : "resources/EeveeSpotifyAnime~ipad.png",
+         "sha256" : "8883bd6f522bcf4f853be655e9c5eeec3d40307ea4185870230c2d44d0ccb8f1",
+         "size" : 9189
+      },
+      {
+         "path" : "resources/Eevify@2x.png",
+         "sha256" : "e99edab399094f4e8ff481e6f5b79378962bf27baebeeafa3985aa3b5a5128a3",
+         "size" : 5912
+      },
+      {
+         "path" : "resources/Eevify@2x~ipad.png",
+         "sha256" : "2dc24e67d40579fa4c41399139669918bc1ee8256f63572475960805c8783c78",
+         "size" : 7534
+      },
+      {
+         "path" : "resources/Eevify@3x.png",
+         "sha256" : "3448298d7755603b5b92ba8c8a49b0978fff412ef9477f5670d55c1183d1ea27",
+         "size" : 9225
+      },
+      {
+         "path" : "resources/Eevify~ipad.png",
+         "sha256" : "11dd6e61c03c3fe1a2669146c0617db739d83b5d35055b03bf3ddb003acfc41c",
+         "size" : 3377
+      },
+      {
+         "path" : "resources/EvilSpotify@2x.png",
+         "sha256" : "f8205b0ba0262fee0c0185168a14d8f53164dfa9f1719e0d747e53db1763d4ba",
+         "size" : 14968
+      },
+      {
+         "path" : "resources/EvilSpotify@2x~ipad.png",
+         "sha256" : "19a3a386e5ffbe78e855e23cdbb01c28e991688863c992f7861dc86ea545f67d",
+         "size" : 20951
+      },
+      {
+         "path" : "resources/EvilSpotify@3x.png",
+         "sha256" : "b54a9b401693ba7f33b73154a70fc52706337aba2a64e02060bdffddb167af4a",
+         "size" : 26806
+      },
+      {
+         "path" : "resources/EvilSpotifyDisco@2x.png",
+         "sha256" : "78d4b72d88c397cc0e7cc24b0f5acee6650375c329905a336e2cb57a101414d5",
+         "size" : 18451
+      },
+      {
+         "path" : "resources/EvilSpotifyDisco@2x~ipad.png",
+         "sha256" : "aa0a7ec178e0f975fc92cef667508a8b8f3c7e30c8c9ea5de69bfb1e5d48f100",
+         "size" : 28619
+      },
+      {
+         "path" : "resources/EvilSpotifyDisco@3x.png",
+         "sha256" : "c4f4b524b200a6f57c4c1b43c741f5fd99536e154d56be850c962d111e100840",
+         "size" : 38007
+      },
+      {
+         "path" : "resources/EvilSpotifyDisco~ipad.png",
+         "sha256" : "31c12991b96026dd71db8c671e1f2b75fa7c167bfd4c450e9d4ae2826859189c",
+         "size" : 7616
+      },
+      {
+         "path" : "resources/EvilSpotify~ipad.png",
+         "sha256" : "aa7e868ab288d2f27cee6cfb96f6cec4fcd4e98f120b83f110d7910de87950c5",
+         "size" : 7855
+      },
+      {
+         "path" : "resources/Goldify@2x.png",
+         "sha256" : "cc84af3400e284eaf267c368e3cd414e156ef3460db1fb48f5d6387bed9d0b5e",
+         "size" : 7343
+      },
+      {
+         "path" : "resources/Goldify@2x~ipad.png",
+         "sha256" : "d98bad1fae3d3e9cfc5b32062fa13f40b4aae678fee0163947c3c9b0cd0f1413",
+         "size" : 11072
+      },
+      {
+         "path" : "resources/Goldify@3x.png",
+         "sha256" : "6029ed66fc20fd58bdf458e50d4105fa5d410345b89a5d28a04b2df69b48e816",
+         "size" : 14984
+      },
+      {
+         "path" : "resources/Goldify~ipad.png",
+         "sha256" : "d790fad8d38dc72d60c39103024ad67ca5fcdbd33285d7caa284132efc3e5ea0",
+         "size" : 3542
+      },
+      {
+         "path" : "resources/Greenify@2x.png",
+         "sha256" : "4ef7d5f7f814dee00d9c93eb7422ef7d8641bd2bd0895ff1bf93913b7a1186e6",
+         "size" : 6180
+      },
+      {
+         "path" : "resources/Greenify@2x~ipad.png",
+         "sha256" : "204f6fb075991abf73c7ecd6b5d554c1e11cd90413b46180efa0934ebd931f2b",
+         "size" : 8163
+      },
+      {
+         "path" : "resources/Greenify@3x.png",
+         "sha256" : "4a98599a1fbe1fd9b6b2122c6fdd926ad0117db22fa57fc1395122bcf34aa1a3",
+         "size" : 10235
+      },
+      {
+         "path" : "resources/Greenify~ipad.png",
+         "sha256" : "b056981a290ff95c6dcebf5c504d583ec55ec65b24fd8412868a86cdea485190",
+         "size" : 3496
+      },
+      {
+         "path" : "resources/HelloKittify@2x.png",
+         "sha256" : "4b3a9fc9d58d7afc5443611795e8d020898092007d295f73d3012637e72bacff",
+         "size" : 22213
+      },
+      {
+         "path" : "resources/HelloKittify@2x~ipad.png",
+         "sha256" : "20b54828749ad053f4e12d894b0740c886f70d9b811815b6b4eacf6d777190d2",
+         "size" : 32258
+      },
+      {
+         "path" : "resources/HelloKittify@3x.png",
+         "sha256" : "23c3e43fe9a4bf574ee3e2ce21da09044a81cb85b029db7ff8ade4f4ccea7077",
+         "size" : 42106
+      },
+      {
+         "path" : "resources/HelloKittify~ipad.png",
+         "sha256" : "26fccd5f4b235c49f3ebdb0379e05993846ef500490e491ba194a2fe524bb17b",
+         "size" : 11468
+      },
+      {
+         "path" : "resources/MikuSpotify@2x.png",
+         "sha256" : "ded97fe716246b0ae1617d23d60d7974cbd66213489c17c634299e80e8113db4",
+         "size" : 19974
+      },
+      {
+         "path" : "resources/MikuSpotify@2x~ipad.png",
+         "sha256" : "273094226659a01225dd632f3dd528bce11a36abf4cc3daf9b54f06e70b15fe8",
+         "size" : 28464
+      },
+      {
+         "path" : "resources/MikuSpotify@3x.png",
+         "sha256" : "920a614151150fda84047106de9ee7262bf82c3e0e6db66c87441ea6aa9518fd",
+         "size" : 36725
+      },
+      {
+         "path" : "resources/MikuSpotify~ipad.png",
+         "sha256" : "cb0f5be7db9b1477fb5c73b39abf2b8bee676acac48b5adb3c156afe41cd40a2",
+         "size" : 10362
+      },
+      {
+         "path" : "resources/Pinkly@2x.png",
+         "sha256" : "3092c8a62e09eb3579516861df6b9a20993d9788e9dd1a7802817bd7413aa4ac",
+         "size" : 11868
+      },
+      {
+         "path" : "resources/Pinkly@2x~ipad.png",
+         "sha256" : "863fb5489c4c79c64e6484c9eb80500c5509dbfa9f190da1b792e8031185eafc",
+         "size" : 18172
+      },
+      {
+         "path" : "resources/Pinkly@3x.png",
+         "sha256" : "91e4d0beca2f78f14c2fa307a686ada8baade4db50ac7e87ab0728dd4c0a154d",
+         "size" : 24320
+      },
+      {
+         "path" : "resources/Pinkly~ipad.png",
+         "sha256" : "cf69a7ec5dd7cfbb8f40993d02c9a978fdf27adbf7bda7a1633698d29ef9a93d",
+         "size" : 5042
+      },
+      {
+         "path" : "resources/SmallvilleSpotify@2x.png",
+         "sha256" : "8a2ed3b0321feae02567bc4c72aa6d3447d118d5d22e3be0fab0a667594fd6fd",
+         "size" : 24573
+      },
+      {
+         "path" : "resources/SmallvilleSpotify@2x~ipad.png",
+         "sha256" : "51fd033fb2be14cddafc8c4d4228b732a1689de37bd08b056c370c33fc7b3699",
+         "size" : 36193
+      },
+      {
+         "path" : "resources/SmallvilleSpotify@3x.png",
+         "sha256" : "779918f4e5afbe15ec94a1db2ed1648d792ec8da67842562572c731027a345ed",
+         "size" : 47881
+      },
+      {
+         "path" : "resources/SmallvilleSpotify~ipad.png",
+         "sha256" : "d651b452c08950203a6b39fe9cfa444fa0b55117c6fab9d71fd58fa837a45213",
+         "size" : 11446
+      },
+      {
+         "path" : "resources/Spotify2012@2x.png",
+         "sha256" : "f7a0847a5efd664a5d436ac9d0ee25c12010ed218c9fb89e28dc8fb9fe0d43d6",
+         "size" : 20163
+      },
+      {
+         "path" : "resources/Spotify2012@2x~ipad.png",
+         "sha256" : "56b5c93ce2fff2f5e1b500f81cb5cee65c6c4294f81f7cfba932849b5baea5cb",
+         "size" : 32228
+      },
+      {
+         "path" : "resources/Spotify2012@3x.png",
+         "sha256" : "7eec66f906cbc46686f1d15d6055c02273b4f1ec13c41d8a450d8d20fcee6e53",
+         "size" : 45575
+      },
+      {
+         "path" : "resources/Spotify2012~ipad.png",
+         "sha256" : "aea35132cea085ff4957dffa300f86da4e5965dd05fe5ebdafa4379837f0122f",
+         "size" : 8687
+      },
+      {
+         "path" : "resources/SpotifyBlueDiamond@2x.png",
+         "sha256" : "90f18e9ecda95f9899f28e934c6bd5355f940d5ef6483ce59f39361de5e4cf8d",
+         "size" : 16589
+      },
+      {
+         "path" : "resources/SpotifyBlueDiamond@2x~ipad.png",
+         "sha256" : "01628aff611ed82b7ba35c2e6c92b853889f3f7596c8385ccf0ad9b30a1132f0",
+         "size" : 23789
+      },
+      {
+         "path" : "resources/SpotifyBlueDiamond@3x.png",
+         "sha256" : "717ce261cd2d8fd84487fc5f65f936d833758d927b677846a2f5355c351e378b",
+         "size" : 31394
+      },
+      {
+         "path" : "resources/SpotifyBlueDiamond~ipad.png",
+         "sha256" : "eb2ffdd2bbf2435e21e9137816fe3155ad9a6eb7f03e086d1f8f31b99ef5cccd",
+         "size" : 7813
+      },
+      {
+         "path" : "resources/SpotifyDarkBlue@2x.png",
+         "sha256" : "cd3dcad43a72db02b6cd8101f18b596f29ebf76ddda3f185a25b917c4d896f76",
+         "size" : 7172
+      },
+      {
+         "path" : "resources/SpotifyDarkBlue@2x~ipad.png",
+         "sha256" : "192b6c49512fcd6a4c072ed5a14112c904389b77435dc4a2888782193f9046f6",
+         "size" : 10546
+      },
+      {
+         "path" : "resources/SpotifyDarkBlue@3x.png",
+         "sha256" : "6e592361000a62ec0d57d62fa423931a144cdb908de7d5af6e91ea8716b64e67",
+         "size" : 14017
+      },
+      {
+         "path" : "resources/SpotifyDarkBlue~ipad.png",
+         "sha256" : "eae0a4309956fc37fd2a95f3c6b8102c95122530718e63bea445e0a78c0ff154",
+         "size" : 3806
+      },
+      {
+         "path" : "resources/SpotifyDeepGreen@2x.png",
+         "sha256" : "241a8e42c76628ed7719fa298cf6e5ba61f9970c994796c430e7c3fb127d64be",
+         "size" : 13677
+      },
+      {
+         "path" : "resources/SpotifyDeepGreen@2x~ipad.png",
+         "sha256" : "c56a482355003a7d623dc42ba84cd6a53834671fd550db825367106adfea1aba",
+         "size" : 18967
+      },
+      {
+         "path" : "resources/SpotifyDeepGreen@3x.png",
+         "sha256" : "a55a349955f322743f75432d275076a3219aa94e33a046e472c9535e125c0b5a",
+         "size" : 23858
+      },
+      {
+         "path" : "resources/SpotifyDeepGreen~ipad.png",
+         "sha256" : "5e0e79839e53fa108549b0d73de230fa28af2baf24f849e90b8325436861b359",
+         "size" : 7102
+      },
+      {
+         "path" : "resources/SpotifyDisco@2x.png",
+         "sha256" : "9b0026127e147bbc7af5bd99db1d4aab2087bed95f27f73331347a019b37b14f",
+         "size" : 25624
+      },
+      {
+         "path" : "resources/SpotifyDisco@2x~ipad.png",
+         "sha256" : "cd0d56e881b9bfc3c575a36d103875ce811575c68cd503df875aede2adce63c3",
+         "size" : 37263
+      },
+      {
+         "path" : "resources/SpotifyDisco@3x.png",
+         "sha256" : "3fd88b5d99b32d72210e36de8fb25cd9c7484c724f89d6348d28eed4335cf2ba",
+         "size" : 49469
+      },
+      {
+         "path" : "resources/SpotifyDisco~ipad.png",
+         "sha256" : "8e925f5c9a03a7c3094500bad61cd0d1fc2abc779ea85a0115d1b3de1a9202ad",
+         "size" : 12221
+      },
+      {
+         "path" : "resources/SpotifyFrieren@2x.png",
+         "sha256" : "48c2447377434825165f7efec7b604a142fb55a8fdb28406217f021a1cf556ed",
+         "size" : 20563
+      },
+      {
+         "path" : "resources/SpotifyFrieren@2x~ipad.png",
+         "sha256" : "46bcbf9ba7af95f0c9eb13b32af7ecb737b87653796876dcaeefa1054b756631",
+         "size" : 29420
+      },
+      {
+         "path" : "resources/SpotifyFrieren@3x.png",
+         "sha256" : "c4f49669691fbe0a9b6ad1fd1c7417549ca99cf19309e7b94d9d7ceef3f76ac6",
+         "size" : 38319
+      },
+      {
+         "path" : "resources/SpotifyFrieren~ipad.png",
+         "sha256" : "e057c0806bd2c7c909470f3e3abc818f658681927ce0fa9b51278bb360fae065",
+         "size" : 10641
+      },
+      {
+         "path" : "resources/SpotifyGloss@2x.png",
+         "sha256" : "209c86627b37e884bb029830b9fc6f691942153b25da2a726aacf51ebe37673b",
+         "size" : 15091
+      },
+      {
+         "path" : "resources/SpotifyGloss@2x~ipad.png",
+         "sha256" : "7d357366eeafc21aca6ddd64321b4250e271adc432249599509bcc5fe0c366b0",
+         "size" : 22906
+      },
+      {
+         "path" : "resources/SpotifyGloss@3x.png",
+         "sha256" : "2d2134a5ed0ac53e58c05adcd6a86529efbc0dcd2d86c4f65bfbebcb228aafae",
+         "size" : 30766
+      },
+      {
+         "path" : "resources/SpotifyGloss~ipad.png",
+         "sha256" : "a248b19e776b3def183e9c73f7e43ea93244798e23888443a6cbf24aba41939b",
+         "size" : 6770
+      },
+      {
+         "path" : "resources/SpotifyJuicy@2x.png",
+         "sha256" : "6a5be87e81914ed92b01590a490a63380550ecf7bd472fda1971261536fa432b",
+         "size" : 16946
+      },
+      {
+         "path" : "resources/SpotifyJuicy@2x~ipad.png",
+         "sha256" : "875c8515ea17d62501cc77d31c20957867596749aff1266441ffd967ac8e3b23",
+         "size" : 23722
+      },
+      {
+         "path" : "resources/SpotifyJuicy@3x.png",
+         "sha256" : "3999d973f0772ac7d75252b6df71a17ef961697f5b12a502e74087aeb9517d0b",
+         "size" : 30614
+      },
+      {
+         "path" : "resources/SpotifyJuicy~ipad.png",
+         "sha256" : "8445e3e374b4e05560f5384b806937a80e20ad7a3180111362597eb526555a64",
+         "size" : 9093
+      },
+      {
+         "path" : "resources/SpotifyLight@2x.png",
+         "sha256" : "73d26357bc47e0e235646e2056f112658c9853e7bce47aec495f81cdf925c662",
+         "size" : 13190
+      },
+      {
+         "path" : "resources/SpotifyLight@2x~ipad.png",
+         "sha256" : "35a3aa2c835073732f18958e0b370ad3af0e98ef430bc4a2688d0da37ef27802",
+         "size" : 18480
+      },
+      {
+         "path" : "resources/SpotifyLight@3x.png",
+         "sha256" : "481d8794374be008bc43bbd3087e4484b5392e001f30ab02039e944d75bda989",
+         "size" : 23184
+      },
+      {
+         "path" : "resources/SpotifyLight@ipad.png",
+         "sha256" : "fb35ca68857bddd6f6bdaae80a55c6d9909c85ad5e90a144d91650ebbbe4f0bd",
+         "size" : 6217
+      },
+      {
+         "path" : "resources/SpotifyLight~ipad.png",
+         "sha256" : "14f77191a083e6c232d0a10c0cfe3048d9fe68236b95763952f4f3fe47572a67",
+         "size" : 7194
+      },
+      {
+         "path" : "resources/SpotifyMiku@2x.png",
+         "sha256" : "f814126a0469a86f905cab51a0bf5dd1441cac0c7b973d65706eb14eefed8053",
+         "size" : 19678
+      },
+      {
+         "path" : "resources/SpotifyMiku@2x~ipad.png",
+         "sha256" : "7655b5bc1660ac26cb979af1484783183b826249eee827fcb3e3e5bf8504f45d",
+         "size" : 28486
+      },
+      {
+         "path" : "resources/SpotifyMiku@3x.png",
+         "sha256" : "06578d1ef2ba7c3fd4a0a87b6cbcae939458d84fec0bb535f22d91c35c7be17a",
+         "size" : 37395
+      },
+      {
+         "path" : "resources/SpotifyMiku~ipad.png",
+         "sha256" : "4b4525bd1b2df9793208ef956011f7b17e4d85b3ea77fe4a61cbed177110d74a",
+         "size" : 9668
+      },
+      {
+         "path" : "resources/SpotifyMonochrome@2x.png",
+         "sha256" : "8e005795a032e4817edd72c7505dc5254ea2908805118db057a46a3836d7639b",
+         "size" : 5374
+      },
+      {
+         "path" : "resources/SpotifyMonochrome@2x~ipad.png",
+         "sha256" : "a5545941a87224ed22cd243fd9018b99f99bfbefb0b538eb3e312bd3cacd7a84",
+         "size" : 6884
+      },
+      {
+         "path" : "resources/SpotifyMonochrome@3x.png",
+         "sha256" : "ef55509b97c90688c60929f6981546733da087e9128ea8d394182c5bbe4680ad",
+         "size" : 8371
+      },
+      {
+         "path" : "resources/SpotifyMonochrome~ipad.png",
+         "sha256" : "675079916329a9c002b8016be4dd337d5f51fe09eb5e6e7573992c3068c1a1e2",
+         "size" : 3723
+      },
+      {
+         "path" : "resources/SpotifyPink@2x.png",
+         "sha256" : "b06068984f558ad5371456ef6dd0c761f8be9d7549d62e1e13314d93b1ea2259",
+         "size" : 10731
+      },
+      {
+         "path" : "resources/SpotifyPink@2x~ipad.png",
+         "sha256" : "c541cb7d5efb46452fbeaded04a6c7228eb0b1313ced76ebac6bbbec497009d9",
+         "size" : 14582
+      },
+      {
+         "path" : "resources/SpotifyPink@3x.png",
+         "sha256" : "3530b712a804a9bd833ecc74d3f96a09e2ca895f40b2bf8adaad13bd43a5e75a",
+         "size" : 18669
+      },
+      {
+         "path" : "resources/SpotifyPink~ipad.png",
+         "sha256" : "8bc4c3df84972f4f85c910b7980787c2dc33eff72221da7a0bafa7920297907b",
+         "size" : 6221
+      },
+      {
+         "path" : "resources/SpotifyPlatinum@2x.png",
+         "sha256" : "c21cd6a22e852040b7ae4ea1cc855801510bde4101e8442fa369804ecf32b99f",
+         "size" : 16854
+      },
+      {
+         "path" : "resources/SpotifyPlatinum@2x~ipad.png",
+         "sha256" : "980c7a8540f17899754b1735d1fb5c15e01af858c04dcfb35709350eb37487a5",
+         "size" : 24354
+      },
+      {
+         "path" : "resources/SpotifyPlatinum@3x.png",
+         "sha256" : "9b6da206e4208d537a4e6cccffecda0cde086123c65f7ecd85e57678e86dce5e",
+         "size" : 31918
+      },
+      {
+         "path" : "resources/SpotifyPlatinum~ipad.png",
+         "sha256" : "402c3c669c4ecdcd76f526cd04a6e588ce0353e39d01f7e96b08c92b497135f5",
+         "size" : 8726
+      },
+      {
+         "path" : "resources/SpotifyPurpleNeon@2x.png",
+         "sha256" : "63cbbf2684e0561e5d831e26034c22b6902128276ccf9e7babeab51f726ff23f",
+         "size" : 12149
+      },
+      {
+         "path" : "resources/SpotifyPurpleNeon@2x~ipad.png",
+         "sha256" : "6e453ea3540a7c89b1a4c8920a3749d2c4013605db915e821bd9824281091b59",
+         "size" : 18300
+      },
+      {
+         "path" : "resources/SpotifyPurpleNeon@3x.png",
+         "sha256" : "cb10237b78a9118c8ae5898c4b864cf93f1cd0360218d7f9dfaeb26244b86b90",
+         "size" : 24373
+      },
+      {
+         "path" : "resources/SpotifyPurpleNeon~ipad.png",
+         "sha256" : "2ba50e86a0613912acd0282fc553926c5aa6382be9a29415bf1b3770f11a4a5b",
+         "size" : 5750
+      },
+      {
+         "path" : "resources/SpotifyScrible@2x.png",
+         "sha256" : "e8c72038e3c9e61e08da0be6c4a8cfef787e7b42a24020c29da299a02b60d9fc",
+         "size" : 20113
+      },
+      {
+         "path" : "resources/SpotifyScrible@2x~ipad.png",
+         "sha256" : "c06fdc1fac0476aa9d7fa480746e1aa30db1318c03e19633951a2f18e95ec35e",
+         "size" : 29936
+      },
+      {
+         "path" : "resources/SpotifyScrible@3x.png",
+         "sha256" : "8c47c60e6179b3869383a42b2c16beaab40b1a9363530133c3bb1064303ec5c7",
+         "size" : 39491
+      },
+      {
+         "path" : "resources/SpotifyScrible~ipad.png",
+         "sha256" : "7b33d709a0be077b94b3ffd64b743fedd8fe2a6e67a6b317f235b5fccefb6caa",
+         "size" : 9825
+      },
+      {
+         "path" : "resources/SpotifyTennis@2x.png",
+         "sha256" : "7e9f9b8e41ce6d8f971c57054d3931fe7736392c97bb443e4ee99ffbf2367ac8",
+         "size" : 19922
+      },
+      {
+         "path" : "resources/SpotifyTennis@2x~ipad.png",
+         "sha256" : "87af3843047533ebf1d6792769486cfe0b8f6a292015478136da58fa997a8cb7",
+         "size" : 31202
+      },
+      {
+         "path" : "resources/SpotifyTennis@3x.png",
+         "sha256" : "f6fe5c871c5ff3a233b1207c22107ddc2b53b081230c22394ab6207c77f42651",
+         "size" : 42569
+      },
+      {
+         "path" : "resources/SpotifyTennis@ipad.png",
+         "sha256" : "8ba2efdb63fdac11d33ec832690cfbec5016cae6ab7278997c06328fdf8df2b8",
+         "size" : 8145
+      },
+      {
+         "path" : "resources/SpotifyTennis~ipad.png",
+         "sha256" : "280acffdd7c1bcf8d9957cceece0ad28826785e10fc69c96e935c37049d1e330",
+         "size" : 8412
+      },
+      {
+         "path" : "resources/SpotifyToys@2x.png",
+         "sha256" : "db35a640e1134726112b852df44325d87c80560f42d7633737d342e72759c69b",
+         "size" : 24425
+      },
+      {
+         "path" : "resources/SpotifyToys@2x~ipad.png",
+         "sha256" : "03ddd93621b8e1a7225df8a15563c592ae48965b52bd4bd64fa2c2f95ed7a050",
+         "size" : 38080
+      },
+      {
+         "path" : "resources/SpotifyToys@3x.png",
+         "sha256" : "e439997e1f64a123bc354d1e82c9b36222b53de161fcd71366bd57f0b00fe36d",
+         "size" : 52088
+      },
+      {
+         "path" : "resources/SpotifyToys~ipad.png",
+         "sha256" : "429f481f1343559ca94131d63ab15f1f680a39e22cf253068623e9b5476ac134",
+         "size" : 10738
+      },
+      {
+         "path" : "resources/SupermanSpotify2@2x.png",
+         "sha256" : "e6d555bfc04279b46cf113ba3c0609dcb53e53ec775d867ae9daee63cfec4250",
+         "size" : 16897
+      },
+      {
+         "path" : "resources/SupermanSpotify2@2x~ipad.png",
+         "sha256" : "515fe87004ea682732d7fa00b97d4515b33b5a86d13c9192d0279f87cd00ad0a",
+         "size" : 27272
+      },
+      {
+         "path" : "resources/SupermanSpotify2@3x.png",
+         "sha256" : "95e56866e56bebf395d0dc707fd45e52d2195f19a49c95f4bc81253744a3939c",
+         "size" : 36195
+      },
+      {
+         "path" : "resources/SupermanSpotify2~ipad.png",
+         "sha256" : "91059a606e3b629aa927f6e37df13cfecff12e3d430c87358463faddda4091cd",
+         "size" : 8158
+      },
+      {
+         "path" : "resources/SupermanSpotify@2x.png",
+         "sha256" : "84d73517e900cfe5672209e4918761bea99c8a9d107baf19fb3d27cefda5ef8d",
+         "size" : 14948
+      },
+      {
+         "path" : "resources/SupermanSpotify@2x~ipad.png",
+         "sha256" : "3e7cd4b015fa232beba8d2e293d1b33783629c4f4733069cd1a8624344347282",
+         "size" : 25028
+      },
+      {
+         "path" : "resources/SupermanSpotify@3x.png",
+         "sha256" : "f8d63adcd50c50b2479e89c57b8019577e51b37c7bffdbc8fb843596cc76baab",
+         "size" : 33372
+      },
+      {
+         "path" : "resources/SupermanSpotify~ipad.png",
+         "sha256" : "e8ac1f9d11b34ae8706913ff5d4e64e22910df69508c93e69e6ebe104204506c",
+         "size" : 7099
+      },
+      {
+         "path" : "resources/Supermanify@2x.png",
+         "sha256" : "6a7764e008e4c310cbe5b35a6a22ad2f2874ec2b53e8c7243a12647c408eecbf",
+         "size" : 8243
+      },
+      {
+         "path" : "resources/Supermanify@2x~ipad.png",
+         "sha256" : "4798ef3385835f01e17ebe8d39c01dc35db40113a2dadc692cdbb719eabfafdc",
+         "size" : 11911
+      },
+      {
+         "path" : "resources/Supermanify@3x.png",
+         "sha256" : "47f7f0baddc4737ad97fe4031a284d1039662407ce0efcb8b223e12e387b6bd2",
+         "size" : 15477
+      },
+      {
+         "path" : "resources/Supermanify~ipad.png",
+         "sha256" : "dbc676048d3583f40fb6d696081003af936783cbd5570aa64b1cea05c7a15118",
+         "size" : 4522
+      },
+      {
+         "path" : "resources/zxcvbn@2x.png",
+         "sha256" : "9f41df69ebb8012080f7fbc6e752d193eb2bfada3b6966712d711bed2746b311",
+         "size" : 31142
+      },
+      {
+         "path" : "resources/zxcvbn@2x~ipad.png",
+         "sha256" : "4751860a7bc3067f6a426fed6146a4c27e98352e074a6114b23a33f14986c8bd",
+         "size" : 47928
+      },
+      {
+         "path" : "resources/zxcvbn@3x.png",
+         "sha256" : "4e8bfb62c88c34cb90b800cd6febc8a3a66837a537ad7fe2e245c85d05fba1e3",
+         "size" : 64815
+      },
+      {
+         "path" : "resources/zxcvbnz@2x~ipad.png",
+         "sha256" : "f93daa7cec6da98ef640d483ac3c46ffbc07230ba91ce913b0b242a03736af27",
+         "size" : 379384
+      },
+      {
+         "path" : "resources/zxcvbnz@3x.png",
+         "sha256" : "98c5d71c6cc4940406c6f2ab20c2dacf05ae30181ca474c6fd9608c5c25c4ed0",
+         "size" : 760109
+      },
+      {
+         "path" : "resources/zxcvbn~ipad.png",
+         "sha256" : "aa929d8c31d0ed12f62d279d5f45bdb8b390dcb295209d2ec9fde70e46b18631",
+         "size" : 13655
+      }
+   ],
+   "name" : "eeveespotify",
+   "origin" : "Evevee Spotify/source-artifacts/EeveeSpotify-6.6.8-SelfContained-v2.deb",
+   "origin_sha256" : "58efafad4d84af882ba2a5f7bcc241b1b6fd347da47d2500c763375e744cd6d2",
+   "package" : "com.eevee.spotify.selfcontained",
+   "version" : "6.6.8-selfcontained.1"
+}

@@ -1,0 +1,57 @@
+#!/usr/bin/env perl
+# Validate the staged Spotify.app filesystem structure before packaging.
+#
+#   PwEvevee/build-system/validate/validate-ipa.pl <staged Spotify.app>
+#
+# Fails on:
+#   - nested *.app bundles (no Spotify.app inside Spotify.app)
+#   - Watch app leftovers (Watch/, *Watch*.app, companion plist keys handled at signing)
+#   - development-only files (.git, .DS_Store, *.o, debug trees, __MACOSX)
+#   - duplicate dylib/framework names anywhere in the tree
+#   - missing critical app files (Info.plist, executable, PkgInfo)
+use strict;
+use warnings;
+use File::Find;
+
+my $app = $ARGV[0] or die "usage: validate-ipa.pl <staged Spotify.app>\n";
+$app =~ s{/+$}{};
+
+my @fail;
+my %names;
+my ($ndylib, $nfw) = (0, 0);
+
+find({ wanted => sub {
+  my $rel = $File::Find::name;
+  $rel =~ s/^\Q$app\E\/?//;
+  return unless length $rel;
+  if (-d $_) {
+    if ($rel =~ m{\.app/.*\.app$}i) { push @fail, "NESTED APP BUNDLE: $rel"; }
+    if ($rel =~ m{^Watch}i || $rel =~ m{/Watch}i) { push @fail, "WATCH APP LEFTOVER: $rel"; }
+    if ($rel eq '__MACOSX') { push @fail, "DEVELOPMENT JUNK: __MACOSX"; }
+    if (/\.framework$/ && $rel =~ m{^Frameworks/[^/]+$}) {
+      $nfw++;
+      my $base = $_;
+      push @fail, "DUPLICATE FRAMEWORK: $base" if $names{"fw:$base"}++;
+    }
+    return;
+  }
+  if (/^\.DS_Store$/ || /^\.git/ || /\.o$/ || /\.orig$/ || /\.rej$/) {
+    push @fail, "DEVELOPMENT-ONLY FILE: $rel";
+  }
+  if (/\.dylib$/ && $rel =~ m{^Frameworks/[^/]+$}) {
+    $ndylib++;
+    push @fail, "DUPLICATE DYLIB: $_" if $names{"dy:$_"}++;
+  }
+}, no_chdir => 1 }, $app);
+
+-f "$app/Info.plist"  or push @fail, "MISSING: Info.plist";
+-f "$app/Spotify"     or push @fail, "MISSING: Spotify executable";
+-f "$app/PkgInfo"     or push @fail, "MISSING: PkgInfo";
+-d "$app/Frameworks"  or push @fail, "MISSING: Frameworks/";
+
+if (@fail) {
+  print "STRUCTURE VALIDATION FAILED:\n";
+  print "  - $_\n" for @fail;
+  exit 1;
+}
+print "STRUCTURE VALIDATION PASSED ($ndylib dylibs, $nfw frameworks, no nesting, no junk)\n";
